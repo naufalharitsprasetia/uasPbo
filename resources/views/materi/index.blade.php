@@ -17,61 +17,18 @@
         </div>
         {{-- End  --}}
         {{-- Card  --}}
-        <div class="card mb-3 mt-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4 border-end">
-                    <img src="img/hukum-mim-test.png" class="img-fluid rounded-start" alt="...">
-                </div>
-
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <div class="shadow card mb-3 mt-3 border-0 p-2" style="width: 250px;">
+            <a href="">
+                <div class="d-flex flex-column">
+                    <div class=" border-end bg-card rounded">
+                        <img src="img/card-img3.png" class="img-fluid rounded-start floating" alt="...">
                     </div>
+                    <hr>
+                    <h5 class="card-title">Nun Sukun Dan Tanwin</h5>
                 </div>
-            </div>
+            </a>
         </div>
         {{-- End Card --}}
-        <div class="row g-3 pt-4 text-center">
-            <!-- Hukum Iqlab -->
-            <div class="col">
-                <a href="#" class="text-decoration-none">
-                    <button class="btn btn-outline-warning btn-lg card-materi-body rounded-circle">Iqlab</button>
-                </a>
-            </div>
-            {{-- End --}}
-            <!-- Hukum Nun Sukun Dan Tanwin -->
-            <div class="col">
-                <a href="#" class="text-decoration-none">
-                    <button class="btn btn-outline-warning btn-lg card-materi-body rounded-circle">Nun Sukun</button>
-                </a>
-            </div>
-            {{-- End --}}
-            <!-- Hukum Nun Sukun Dan Tanwin -->
-            <div class="col">
-                <a href="#" class="text-decoration-none">
-                    <button class="btn btn-outline-warning btn-lg card-materi-body rounded-circle">Makharijul Huruf</button>
-                </a>
-            </div>
-            {{-- End --}}
-            <!-- Hukum Ikhfa Completed -->
-            <div class="col">
-                <a href="#" class="text-decoration-none">
-                    <button class="btn materi-success btn-lg card-materi-body rounded-circle">✅</button>
-                </a>
-            </div>
-            {{-- End --}}
-            @for ($i = 0; $i < 10; $i++)
-                <!-- Hukum Ikhfa -->
-                <div class="col">
-                    <a href="#" class="text-decoration-none">
-                        <button class="btn btn-outline-warning btn-lg card-materi-body rounded-circle">Ikhfa</button>
-                    </a>
-                </div>
-                {{-- End --}}
-            @endfor
-        </div>
+
     </div>
 @endsection
