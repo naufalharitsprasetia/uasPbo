@@ -48,7 +48,7 @@
     background-size: 100% !important;
     background-repeat: no-repeat !important;
 }
-.active {
+.active-nav {
     text-decoration: underline;
     color: #ff8a00 !important;
 }
@@ -68,3 +68,24 @@ nav {
     box-shadow: 0px 0px 10px 0px black !important;
 }
 /* End */
+
+/* Card Materi */
+.card-materi {
+    /* background-color: #fff6e4; */
+}
+.card-materi-body {
+    /* transition: 1s; */
+    background-color: white;
+    box-shadow: 0px 4px 0px #5f4110;
+}
+.card-materi-body:hover {
+    color: white;
+    /* transform: translate(0px, 4px); */
+    /* box-shadow: none; */
+}
+.materi-success {
+    background-color: #00d26a;
+}
+.materi-success:hover {
+    background-color: #00d26a !important;
+}

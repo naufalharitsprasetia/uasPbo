@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chewy&family=Jockey+One&family=Luckiest+Guy&family=Nabla&family=Odibee+Sans&family=Poppins:wght@500&display=swap"
         rel="stylesheet">
+    {{-- Font AWESOME --}}
+    <script src="https://kit.fontawesome.com/0e361b3f2b.js" crossorigin="anonymous"></script>
     <!-- Logo -->
     <link rel="icon" href="img/logotok.png" />
     <!-- Title -->

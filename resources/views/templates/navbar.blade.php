@@ -14,10 +14,10 @@
             {{-- MX Auto Untuk Di Tengah --}}
             <ul class="navbar-nav mx-auto fw-bold">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active-nav" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Materi</a>
+                    <a class="nav-link" href="/materi">Materi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latihan</a>
