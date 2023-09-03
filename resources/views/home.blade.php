@@ -35,7 +35,7 @@
                 <div class="card">
                     <img src="img/bg-blue.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-center fw-bold">Penjelasan</h5>
+                        <h5 class="card-title text-center fw-bold">Materi</h5>
                         <p class="card-text">Materi-Materi Tajwid Dijelaskan Secara Pengertian dan Contoh2.</p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                 <div class="card">
                     <img src="img/bg-green.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-center fw-bold">Quiz</h5>
+                        <h5 class="card-title text-center fw-bold">Forum Diskusi</h5>
                         <p class="card-text">Disini Juga Terdapat Quiz-Quiz Agar Pembelajaran Tajwid tidak terlalu
                             membosankan.</p>
                     </div>

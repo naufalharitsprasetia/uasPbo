@@ -14,13 +14,17 @@
             {{-- MX Auto Untuk Di Tengah --}}
             <ul class="navbar-nav mx-auto fw-bold">
                 <li class="nav-item">
-                    <a class="nav-link active-nav" aria-current="page" href="#">Home</a>
+                    <a class="nav-link {{ $active === 'home' ? 'active-nav' : '' }}" aria-current="page"
+                        href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/materi">Materi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Latihan</a>
+                    <a class="nav-link" href="/latihan">Latihan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ $active === 'about' ? 'active-nav' : '' }}" href="/about">About</a>
                 </li>
             </ul>
             {{-- MS Auto Untuk Di Kanan --}}

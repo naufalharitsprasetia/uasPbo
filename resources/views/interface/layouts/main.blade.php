@@ -31,8 +31,10 @@
 <body>
     {{-- @include('templates.navbar') --}}
     <main class="d-flex flex-nowrap">
-        @include('materi.layouts.sidebar')
-        @yield('container')
+        @include('interface.layouts.sidebar')
+        <div class="container-fluid main-content mt-4">
+            @yield('container')
+        </div>
     </main>
     {{-- JS Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
