@@ -38,12 +38,12 @@
                 Profil
             </a>
         </li>
-        <li>
+        {{-- <li>
             <a href="/setting" class="nav-link link-body-emphasis {{ $active === 'setting' ? 'active-sidebar' : '' }}">
                 <i class="fa-solid fa-gear fa-spin me-1" style="color: #9f1414;"></i>
                 Setting
             </a>
-        </li>
+        </li> --}}
         <hr>
         <li>
             <a href="/panel" class="nav-link link-body-emphasis {{ $active === 'panel' ? 'active-sidebar' : '' }}">
@@ -61,7 +61,7 @@
             <strong>Naufal Harits</strong>
         </a>
         <ul class="dropdown-menu text-small shadow">
-            <li><a class="dropdown-item" href="#">Settings</a></li>
+            {{-- <li><a class="dropdown-item" href="#">Settings</a></li> --}}
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li>
                 <hr class="dropdown-divider">

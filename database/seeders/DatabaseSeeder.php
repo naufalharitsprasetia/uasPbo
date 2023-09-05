@@ -61,6 +61,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'izhar-halqi',
             'desc' => 'Manakala Ada Nun Sukun Bertemu dengan tanwin',
             'body' => 'Manakala Ada Nun Sukun Bertemu dengan tanwin, dan lain-lain',
+            'text_suara' => 'Iqlab',
             'contoh_suara' => 'sound/contoh.mp3'
         ]);
         Latihan::create([
