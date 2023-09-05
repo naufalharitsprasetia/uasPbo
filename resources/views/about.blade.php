@@ -17,6 +17,7 @@
             cupiditate explicabo nostrum optio suscipit quidem atque tenetur laboriosam alias placeat. Distinctio numquam
             repellendus dicta.</p>
         <hr>
+        {{-- Collaburator --}}
         <div class="collaburators">
             <h2 class="text-center">Collaburators</h2>
             <br>
@@ -29,7 +30,7 @@
                     </div>
                 </div>
                 <div class="card bg-button-primary border-0 mx-3" style="width: 18rem;">
-                    <img src="img/colab-1.png" class="card-img-top" alt="...">
+                    <img src="img/colab-2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title jocky-font text-center fw-bold">Mohamad Farhat</h5>
                         <p class="card-text odibee-font text-center">Student At University Of Darussalam Gontor</p>
@@ -37,5 +38,49 @@
                 </div>
             </div>
         </div>
+        {{-- END --}}
+        {{-- Supported By --}}
+        <hr>
+        <div class="supported-by">
+            <h2 class="text-center">Supported By : </h2>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-center mx-4">
+                    <img src="img/unida.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/ti.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/dawet.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/hmp.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+            </div>
+        </div>
+        {{-- END --}}
+        {{-- Built With --}}
+        <hr>
+        <div class="built-with">
+            <h2 class="text-center">Built With : </h2>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-center mx-4">
+                    <img src="img/laravel2.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/bootstrap.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/php.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/vscode.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+                <div class="text-center mx-4">
+                    <img src="img/font-awesome.png" class="img-fluid rounded " alt="..." style="width: 10rem;">
+                </div>
+            </div>
+        </div>
+        {{-- END --}}
     </div>
 @endsection

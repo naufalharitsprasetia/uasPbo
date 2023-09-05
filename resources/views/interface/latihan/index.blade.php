@@ -24,7 +24,7 @@
             </div>
             <a class="btn btn-primary" href="#" role="button">Lompati</a>
             {{-- <input class="btn btn-primary" type="submit" value="Lompati"> --}}
-            <input class="btn btn-primary ms-auto float-end" type="submit" value="Submit">
+            <input class="btn btn-primary ms-auto float-end" type="submit" value="Periksa   ">
         </form>
 
     </div>

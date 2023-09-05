@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Materi extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+    protected $with = ['category'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function latihan()
+    {
+        return $this->hasOne(Latihan::class);
+    }
 }

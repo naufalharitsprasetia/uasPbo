@@ -23,7 +23,10 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <!-- sidebar Style -->
     <link rel="stylesheet" href="css/sidebars.css">
-
+    {{-- Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+    {{--  --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <!-- Own Style -->
     <link rel="stylesheet" href="css/style.css" />
@@ -44,6 +47,8 @@
     <script src="js/script.js"></script>
     {{-- Sidebars Javascript --}}
     <script src="js/sidebars.js"></script>
+    {{-- Trix --}}
+    <script src="js/attachments.js"></script>
 </body>
 
 </html>

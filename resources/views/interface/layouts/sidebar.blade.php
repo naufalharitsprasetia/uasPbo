@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary position-fixed sidebar-materi">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary position-fixed sidebar-materi overflow-x-auto">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <img src="img/logoicon.png" alt="Logo" width="30" height="30"
             class="d-inline-block align-text-top mx-2" />
@@ -14,7 +14,7 @@
             </a>
         </li>
         <li>
-            <a href="/materi" class="nav-link link-body-emphasis {{ $active === 'materi' ? 'active-sidebar' : '' }}">
+            <a href="/category" class="nav-link link-body-emphasis {{ $active === 'materi' ? 'active-sidebar' : '' }}">
                 <i class="fa-solid fa-book me-2" style="color: #7899d0;"></i>
                 Materi
             </a>
@@ -44,9 +44,16 @@
                 Setting
             </a>
         </li>
+        <hr>
+        <li>
+            <a href="/panel" class="nav-link link-body-emphasis {{ $active === 'panel' ? 'active-sidebar' : '' }}">
+                <i class="fa-solid fa-pen-to-square fa-fade"></i>
+                Admin Panel
+            </a>
+        </li>
+        <hr>
     </ul>
-    <hr>
-    <br><br><br><br><br><br>
+    <br><br><br><br>
     <div class="dropup-center dropup">
         <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">

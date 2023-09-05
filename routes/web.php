@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,9 +26,9 @@ Route::get('/about', function () {
         'active' => 'about'
     ]);
 });
-Route::get('/materi', function () {
-    return view('interface.materi.index', [
-        'title' => 'Materi',
+Route::get('/category', function () {
+    return view('interface.category.index', [
+        'title' => 'Category',
         'active' => 'materi'
     ]);
 });
@@ -55,3 +56,32 @@ Route::get('/setting', function () {
         'active' => 'setting'
     ]);
 });
+
+Route::get('/materi', function () {
+    return view('interface.materi.index', [
+        'title' => 'Materi',
+        'active' => 'materi'
+    ]);
+});
+// Panel
+Route::get('/panel', function () {
+    return view('interface.panel.index', [
+        'title' => 'Panel',
+        'active' => 'panel'
+    ]);
+});
+Route::get('/create-materi', function () {
+    return view('interface.panel.create-materi', [
+        'title' => 'Create Materi',
+        'active' => 'panel'
+    ]);
+});
+Route::post('/create-materi', [MateriController::class, 'store']);
+Route::get('/create-category', function () {
+    return view('interface.panel.create-category', [
+        'title' => 'Create Category',
+        'active' => 'panel'
+    ]);
+});
+
+// End Panel
