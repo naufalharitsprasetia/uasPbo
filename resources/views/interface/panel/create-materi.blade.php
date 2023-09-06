@@ -26,8 +26,8 @@
             <div class="mb-3">
                 <label for="suara" class="form-label">Conoh Suara</label>
                 <input class="form-control" type="file" id="suara" name="suara">
-                <span class="input-group-text" id="basic-addon1">Text Suara</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                <br>
+                <input type="text" class="form-control" placeholder="Text Suara" aria-label="Username"
                     aria-describedby="basic-addon1">
 
             </div>

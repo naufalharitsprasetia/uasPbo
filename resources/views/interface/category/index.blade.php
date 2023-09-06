@@ -18,7 +18,7 @@
     <br>
     <div class="row gap-4 justify-content-center me-4">
 
-        @for ($i = 0; $i < 10; $i++)
+        @foreach ($categories as $category)
             {{-- Card  --}}
             <div class="shadow card mb-3 mt-3 border-0 p-2 floating" style="width: 180px;">
                 <a href="/materi" class="text-decoration-none">
@@ -27,11 +27,11 @@
                             <img src="img/card-img3.png" class="img-fluid rounded-start " alt="...">
                         </div>
                         <hr>
-                        <h5 class="card-title text-dark fw-bold text-center">Nun Sukun Dan Tanwin</h5>
+                        <h5 class="card-title text-dark fw-bold text-center">{{ $category->name }}</h5>
                     </div>
                 </a>
             </div>
             {{-- End Card --}}
-        @endfor
+        @endforeach
     </div>
 @endsection

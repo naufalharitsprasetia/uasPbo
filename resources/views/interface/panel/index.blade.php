@@ -3,6 +3,11 @@
 @section('container')
     <div class="latihan-container bg-white rounded p-4 mx-3">
         <h1>Panel</h1>
+        @if (session()->has('success'))
+            <div class="alert alert-success col-lg-12" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
         <a href="/create-materi" class="btn btn-success">Create Materi</a>
         <a href="/create-category" class="btn btn-success">Create Category</a>
         <br>

@@ -1,7 +1,7 @@
 @extends('interface.layouts.main')
 
 @section('container')
-    <div class="latihan-container bg-white rounded p-4 mx-3">
+    <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-success border-5">
         <button type="button" class="btn-close float-end" aria-label="Close"></button>
         <h1 class="fw-bold">Latihan</h1>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0"

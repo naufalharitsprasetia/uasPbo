@@ -18,7 +18,7 @@
                         href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/materi">Materi</a>
+                    <a class="nav-link" href="/category">Materi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/latihan">Latihan</a>
@@ -30,10 +30,10 @@
             {{-- MS Auto Untuk Di Kanan --}}
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item bg-button-primary">
-                    <a href="#" class="nav-link text-button-primary">Login</a>
+                    <a href="/login" class="nav-link text-button-primary">Login</a>
                 </li>
                 <li class="nav-item bg-button-secondary">
-                    <a href="#" class="nav-link text-button-secondary">Register</a>
+                    <a href="/register" class="nav-link text-button-secondary">Register</a>
                 </li>
             </ul>
         </div>

@@ -38,12 +38,13 @@
                 Profil
             </a>
         </li>
-        {{-- <li>
-            <a href="/setting" class="nav-link link-body-emphasis {{ $active === 'setting' ? 'active-sidebar' : '' }}">
-                <i class="fa-solid fa-gear fa-spin me-1" style="color: #9f1414;"></i>
-                Setting
+        <li>
+            <a href="/forum-diskusi"
+                class="nav-link link-body-emphasis {{ $active === 'forum-diskusi' ? 'active-sidebar' : '' }}">
+                <i class="fa-regular fa-comments fa-fade"></i>
+                Forum Diskusi
             </a>
-        </li> --}}
+        </li>
         <hr>
         <li>
             <a href="/panel" class="nav-link link-body-emphasis {{ $active === 'panel' ? 'active-sidebar' : '' }}">

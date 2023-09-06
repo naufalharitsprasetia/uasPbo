@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MateriController;
+use App\Http\Controllers\PanelCategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,18 +22,28 @@ Route::get('/', function () {
         'active' => 'home'
     ]);
 });
+Route::get('/login', function () {
+    return view('login', [
+        'title' => 'Login'
+    ]);
+});
+Route::get('/register', function () {
+    return view('register', [
+        'title' => 'Register'
+    ]);
+});
 Route::get('/about', function () {
     return view('about', [
         'title' => 'About',
         'active' => 'about'
     ]);
 });
-Route::get('/category', function () {
-    return view('interface.category.index', [
-        'title' => 'Category',
-        'active' => 'materi'
-    ]);
-});
+// Category
+Route::get('/category', [CategoryController::class, 'index']);
+// Route::resource('/create-category', PanelCategoryController::class);
+Route::get('/create-category', [PanelCategoryController::class, 'index']);
+Route::post('/create-category', [PanelCategoryController::class, 'store']);
+// End
 Route::get('/latihan', function () {
     return view('interface.latihan.index', [
         'title' => 'Latihan',
@@ -56,13 +68,20 @@ Route::get('/setting', function () {
         'active' => 'setting'
     ]);
 });
-
+// MATERI
 Route::get('/materi', function () {
     return view('interface.materi.index', [
         'title' => 'Materi',
         'active' => 'materi'
     ]);
 });
+Route::get('/learn', function () {
+    return view('interface.materi.learn', [
+        'title' => 'Learn',
+        'active' => 'materi'
+    ]);
+});
+// End
 // Panel
 Route::get('/panel', function () {
     return view('interface.panel.index', [
@@ -77,11 +96,11 @@ Route::get('/create-materi', function () {
     ]);
 });
 Route::post('/create-materi', [MateriController::class, 'store']);
-Route::get('/create-category', function () {
-    return view('interface.panel.create-category', [
-        'title' => 'Create Category',
-        'active' => 'panel'
+// End Panel
+// Forum Diskusi
+Route::get('/forum-diskusi', function () {
+    return view('interface.forum-diskusi.index', [
+        'title' => 'Forum Diskusi',
+        'active' => 'forum-diskusi'
     ]);
 });
-
-// End Panel

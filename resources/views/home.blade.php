@@ -33,20 +33,21 @@
             {{-- 1 --}}
             <div class="col-4">
                 <div class="card">
-                    <img src="img/bg-blue.svg" class="card-img-top" alt="...">
+                    <img src="img/bg-learn.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Materi</h5>
-                        <p class="card-text">Materi-Materi Tajwid Dijelaskan Secara Pengertian dan Contoh2.</p>
+                        <p class="card-text text-center">Materi-Materi Tajwid Dijelaskan Secara Pengertian dan Contoh2.</p>
                     </div>
                 </div>
             </div>
             {{-- 2 --}}
             <div class="col-4">
                 <div class="card">
-                    <img src="img/bg-red.svg" class="card-img-top" alt="...">
+                    <img src="img/bg-trainning.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Latihan</h5>
-                        <p class="card-text">SIBETA menyediakan beberapa latihan untuk menguji seberapa paham seseorang akan
+                        <p class="card-text text-center">SIBETA menyediakan beberapa latihan untuk menguji seberapa paham
+                            seseorang akan
                             pelajaran yang sudah dipelajari.</p>
                     </div>
                 </div>
@@ -54,16 +55,23 @@
             {{-- 3 --}}
             <div class="col-4">
                 <div class="card">
-                    <img src="img/bg-green.svg" class="card-img-top" alt="...">
+                    <img src="img/bg-diskusi.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Forum Diskusi</h5>
-                        <p class="card-text">Disini Juga Terdapat Quiz-Quiz Agar Pembelajaran Tajwid tidak terlalu
-                            membosankan.</p>
+                        <p class="card-text text-center">Berdiskusi dengan para expert, alumni, atau siswa lainnya terkait
+                            kelas Belajar
+                            Tajwid di SIBETA.
+
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <br>
     <!-- End -->
+    <br>
+    <div class="contatiner">
+        <h2 class="text-center">Contoh Tampilan SIBETA</h2>
+    </div>
 @endsection

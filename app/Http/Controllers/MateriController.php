@@ -9,7 +9,8 @@ class MateriController extends Controller
     //
     public function store(Request $request)
     {
-        echo $request->input('body');
+        $hasil = $request;
+        // var_dump($request->input('body'));
         // return;
     }
 }
