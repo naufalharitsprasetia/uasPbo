@@ -54,20 +54,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Nun Sukun Dan Tanwin</td>
-                        <td>
-                            <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
-                            <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
-                            <form action="" method="post" class="d-inline">
-                                @method('delete')
-                                @csrf
-                                <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
-                                        class="bi bi-x-circle"></i></button>
-                            </form>
-                        </td>
-                    </tr>
+                    @foreach ($categories as $category)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $category->name }}</td>
+                            <td>
+                                <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
+                                <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
+                                <form action="" method="post" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
+                                            class="bi bi-x-circle"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
 
                 </tbody>
             </table>

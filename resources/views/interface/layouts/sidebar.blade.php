@@ -46,28 +46,37 @@
             </a>
         </li>
         <hr>
-        <li>
-            <a href="/panel" class="nav-link link-body-emphasis {{ $active === 'panel' ? 'active-sidebar' : '' }}">
-                <i class="fa-solid fa-pen-to-square fa-fade"></i>
-                Admin Panel
-            </a>
-        </li>
-        <hr>
+        @can('admin')
+            <li>
+                <a href="/panel" class="nav-link link-body-emphasis {{ $active === 'panel' ? 'active-sidebar' : '' }}">
+                    <i class="fa-solid fa-pen-to-square fa-fade"></i>
+                    Admin Panel
+                </a>
+            </li>
+            <hr>
+        @endcan
     </ul>
     <br><br><br><br>
     <div class="dropup-center dropup">
         <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">
             <img src="img/profile.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>Naufal Harits</strong>
+            <strong>{{ auth()->user()->name }}</strong>
         </a>
         <ul class="dropdown-menu text-small shadow">
             {{-- <li><a class="dropdown-item" href="#">Settings</a></li> --}}
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="/profil">Profile</a></li>
             <li>
                 <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li>
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item">
+                        Logout
+                    </button>
+                </form>
+            </li>
         </ul>
     </div>
 </div>

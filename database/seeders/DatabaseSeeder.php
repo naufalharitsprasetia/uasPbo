@@ -28,32 +28,81 @@ class DatabaseSeeder extends Seeder
             'email' => 'naufal@gmail.com',
             'is_admin' => true,
         ]);
+        User::create([
+            'name' => 'Mohamad',
+            'username' => 'fardanio',
+            'password' => bcrypt('bismillah'),
+            'email' => 'farhat@gmail.com',
+            'is_admin' => true,
+        ]);
         User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        // Category
+        // 1
         Category::create([
-            'name' => 'Hal Nun Sukun dan Tanwin',
-            'slug' => 'hal-nun-sukun-dan-tanwin'
+            'name' => 'Nun Sukun dan Tanwin',
+            'slug' => 'nun-sukun-dan-tanwin'
         ]);
+        // 2
         Category::create([
-            'name' => 'Hal Mim Sukun',
-            'slug' => 'hal-mim-sukun'
+            'name' => 'Mim Sukun',
+            'slug' => 'mim-sukun'
         ]);
+        // 3
         Category::create([
-            'name' => 'Hal Mim Tasydid dan Nun Tasydid',
-            'slug' => 'hal-mim-tasydid-dan-nun-tasydid'
+            'name' => 'Mim Tasydid dan Nun Tasydid',
+            'slug' => 'mim-tasydid-dan-nun-tasydid'
         ]);
+        // 4
         Category::create([
-            'name' => "Hal Laam Ta'rief",
-            'slug' => 'hal-laam-ta-rief'
+            'name' => "Laam Ta'rief",
+            'slug' => 'laam-ta-rief'
         ]);
+        // 5
         Category::create([
-            'name' => 'Hal Laam Tebal dan Tipis',
-            'slug' => 'hal-laam-tebal-dan-tipis'
+            'name' => 'Laam Tebal dan Tipis',
+            'slug' => 'laam-tebal-dan-tipis'
         ]);
+        // 6
+        Category::create([
+            'name' => 'Idgham Mutamasilain',
+            'slug' => 'idgham-mutamasilain'
+        ]);
+        // 7
+        Category::create([
+            'name' => 'Idgham Mutaqaribain',
+            'slug' => 'idgham-mutaqaribain'
+        ]);
+        // 8
+        Category::create([
+            'name' => 'Idgham Mutajanisain',
+            'slug' => 'idgham-mutajanisain'
+        ]);
+        // 9
+        Category::create([
+            'name' => 'Mad',
+            'slug' => 'mad'
+        ]);
+        // 10
+        Category::create([
+            'name' => 'Raa',
+            'slug' => 'raa'
+        ]);
+        // 11
+        Category::create([
+            'name' => 'Qalqalah',
+            'slug' => 'qalqalah'
+        ]);
+        // 12
+        Category::create([
+            'name' => 'Waqaf',
+            'slug' => 'waqaf'
+        ]);
+
 
         Materi::create([
             'category_id' => 1,

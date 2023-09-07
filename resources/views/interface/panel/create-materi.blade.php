@@ -24,12 +24,18 @@
             <trix-editor input="body"></trix-editor>
             <br>
             <div class="mb-3">
-                <label for="suara" class="form-label">Conoh Suara</label>
+                <label for="suara" class="form-label">Contoh Suara</label>
                 <input class="form-control" type="file" id="suara" name="suara">
                 <br>
                 <input type="text" class="form-control" placeholder="Text Suara" aria-label="Username"
                     aria-describedby="basic-addon1">
 
+            </div>
+            <div class="mb-3">
+                <label for="link_video" class="form-label">Link Video Yt</label>
+                <br>
+                <small class="text-secondary">contoh : "https://youtu.be/aE5MOKbVbYY?si=Fre3OiaJV9A1Y8bn"</small>
+                <input class="form-control" type="text" id="link_video" name="link_video">
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Create</button>

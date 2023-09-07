@@ -29,12 +29,35 @@
             </ul>
             {{-- MS Auto Untuk Di Kanan --}}
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item bg-button-primary">
-                    <a href="/login" class="nav-link text-button-primary">Login</a>
-                </li>
-                <li class="nav-item bg-button-secondary">
-                    <a href="/register" class="nav-link text-button-secondary">Register</a>
-                </li>
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Welcome back, {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/profil"><i class="bi bi-layout-text-sidebar-reverse"></i>
+                                    My Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>
+                                        Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item bg-button-primary">
+                        <a href="/login" class="nav-link text-button-primary">Login</a>
+                    </li>
+                    <li class="nav-item bg-button-secondary">
+                        <a href="/register" class="nav-link text-button-secondary">Register</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

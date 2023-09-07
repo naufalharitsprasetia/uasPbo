@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('body');
             $table->string('contoh_suara');
             $table->string('text_suara');
+            $table->string('link_video')->nullable();
             $table->timestamps();
         });
     }
