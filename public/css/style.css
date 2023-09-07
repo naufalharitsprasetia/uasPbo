@@ -16,6 +16,9 @@
     letter-spacing: 3px;
     font-family: "Jockey One", sans-serif;
 }
+.arabic-font {
+    font-family: "Noto Sans Arabic", sans-serif;
+}
 .jf-shadow {
     color: #78bef2;
     text-shadow: 0 0 18px black;

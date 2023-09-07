@@ -35,12 +35,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'farhat@gmail.com',
             'is_admin' => true,
         ]);
-        User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
         // Category
         // 1
         Category::create([
@@ -102,7 +97,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'Waqaf',
             'slug' => 'waqaf'
         ]);
-
+        JenisPertanyaan::create([
+            'jenis_pertanyaan' => 'Multiple Choice'
+        ]);
+        JenisPertanyaan::create([
+            'jenis_pertanyaan' => 'Speech'
+        ]);
+        JenisPertanyaan::create([
+            'jenis_pertanyaan' => 'Listening'
+        ]);
 
         Materi::create([
             'category_id' => 1,
@@ -118,19 +121,12 @@ class DatabaseSeeder extends Seeder
             'jenis_pertanyaan_id' => 1,
             'pertanyaan' => '1. Jika Nun sukun bertemu dengan mim disebut ??'
         ]);
-        JenisPertanyaan::create([
-            'jenis_pertanyaan' => 'Multiple Choice'
-        ]);
-        JenisPertanyaan::create([
-            'jenis_pertanyaan' => 'Speech'
-        ]);
-        JenisPertanyaan::create([
-            'jenis_pertanyaan' => 'Listening'
-        ]);
+
         Progress::create([
             'user_id' => 1,
             'exp' => 20
         ]);
+
         Jawaban::create([
             'latihan_id' => 1,
             'jawaban' => "Idzhar",

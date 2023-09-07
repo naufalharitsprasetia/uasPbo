@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Chewy&family=Jockey+One&family=Luckiest+Guy&family=Nabla&family=Odibee+Sans&family=Poppins:wght@500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=Jockey+One&family=Luckiest+Guy&family=Nabla&family=Noto+Sans+Arabic:wght@700&family=Odibee+Sans&family=Poppins:wght@500&display=swap"
         rel="stylesheet">
     {{-- Font AWESOME --}}
     <script src="https://kit.fontawesome.com/0e361b3f2b.js" crossorigin="anonymous"></script>

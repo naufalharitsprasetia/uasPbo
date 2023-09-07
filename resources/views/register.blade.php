@@ -39,29 +39,54 @@
                             <form class="user" method="post" action="/register">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="name"
-                                        placeholder="Full Name" name="name">
+                                    <input type="text"
+                                        class="form-control form-control-user @error('name') is-invalid @enderror"
+                                        id="name" placeholder="Full Name" name="name">
+                                    @error('name')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="username"
-                                        placeholder="Username" pattern="^[^\s]+$" name="username">
+                                    <input type="text"
+                                        class="form-control form-control-user @error('username') is-invalid @enderror"
+                                        id="username" placeholder="Username (No Space)" pattern="^[^\s]+$"
+                                        name="username">
+                                    @error('username')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="email"
-                                        name="email" placeholder="Email Address">
+                                    <input type="email"
+                                        class="form-control form-control-user @error('email') is-invalid @enderror"
+                                        id="email" name="email" placeholder="Email Address">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user" id="password"
-                                        name="password" placeholder="Password">
+                                    <input type="password"
+                                        class="form-control form-control-user @error('password') is-invalid @enderror"
+                                        id="password" name="password" placeholder="Password">
+                                    @error('password')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </button>
                             </form>
                             <hr>
-                            <div class="text-center">
+                            {{-- <div class="text-center">
                                 <a class="small" href="/forgot-password">Forgot Password?</a>
-                            </div>
+                            </div> --}}
                             <div class="text-center">
                                 <a class="small" href="/login">Already have an account? Login!</a>
                             </div>
