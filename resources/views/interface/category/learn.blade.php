@@ -2,35 +2,28 @@
 
 @section('container')
     <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-success border-5">
-        <h1>Belajar | Idzhar Halqi</h1>
+        <h1>Belajar | {{ $materi->judul }}</h1>
     </div>
     <br>
     <div class="latihan-container bg-success text-white rounded p-4 mx-3 border border-white border-5 fs-5"
         style="text-shadow: 0px 0px 7px  black">
         <div class="text-center">
-            <h2 class="text-center">Ayok Belajar !!</h2>
-            <img src="img/ayok-belajar.png" alt="" width="350">
+            <h2 class="text-center">Ayok Belajar !! 👨‍🏫</h2>
+            <img src="/img/ayok-belajar.png" alt="" width="350">
         </div>
         <br>
-        - Manakala ada Nun Sukun [ن] atau tanwin [ ً ٍ ٌ] bertemu salah satu huruf halqi [حروف حلقي] yang enam yakni :
-        hamzah, haa, haa', 'ain, ghain, dan khoo<blockquote> [ء ح ه ع غ خ]</blockquote>- Maka hukum bacaannya disebut:
-        <b>Idzhar Halqi</b>
-        <blockquote>[إظهار حلقى]</blockquote>
-        - Cara membacanya: harus dibaca dengan terang dan jelas sebab bertemu dengan huruf halqi.
-        <blockquote>Contohnya : </blockquote>
-        <blockquote>غفور حليم ، سميع عليم ، منه</blockquote>
-        dan lain sebagainya.
+        <h3 class="text-uppercase text-decoration-underline">{{ $materi->judul }}</h3>
+        {!! $materi->body !!}
         <br><br>
-        - Keterangan:
-        Idzhar artinya : menerangkan atau menjelaskan.
-        Halqi artinya : kerongkongan.
-        <br><br>
+        <hr>
         <div class="text-center">
-            <img src="img/paham.png" alt="" width="300">
+            <h3>Apakah Kamu Sudah Memahami <br>
+                Apa Itu <b>{{ $materi->judul }} ?</b></h3>
+            <img src="/img/paham.png" alt="" width="300">
             <br>
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary border border-white border-2 btn-lg ">Ya, Saya Paham</button>
+            <button type="submit" class="btn btn-primary border border-white border-3 btn-lg ">Ya, Saya Paham</button>
         </div>
     </div>
     <br>

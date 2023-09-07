@@ -112,7 +112,12 @@ class DatabaseSeeder extends Seeder
             'judul' => 'Izhar Halqi',
             'slug' => 'izhar-halqi',
             'desc' => 'Manakala Ada Nun Sukun Bertemu dengan tanwin',
-            'body' => 'Manakala Ada Nun Sukun Bertemu dengan tanwin, dan lain-lain',
+            'body' => "- Manakala ada Nun Sukun [ن] atau tanwin [ ً ٍ ٌ] bertemu salah satu huruf halqi [حروف حلقي] yang enam yakni :
+                        hamzah, haa, haa' 'ain, ghain, dan khoo<blockquote> [ء ح ه ع غ خ] </blockquote> - Maka hukum bacaannya disebut:
+                        <b>Idzhar Halqi</b>  <blockquote>[إظهار حلقى]</blockquote> - Cara membacanya: harus dibaca dengan terang dan jelas sebab bertemu dengan huruf halqi.
+                        <blockquote>Contohnya : </blockquote>     <blockquote>غفور حليم ، سميع عليم ، منه</blockquote>
+                        dan lain sebagainya. <br><br> - Keterangan:  Idzhar artinya : menerangkan atau menjelaskan.
+                        Halqi artinya : kerongkongan.",
             'text_suara' => 'Iqlab',
             'contoh_suara' => 'sound/contoh.mp3'
         ]);

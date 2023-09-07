@@ -5,8 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PanelCategoryController;
+use App\Http\Controllers\PanelLatihanController;
+use App\Http\Controllers\PanelController;
+use App\Http\Controllers\PanelMateriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,42 +23,33 @@ use App\Http\Controllers\PanelCategoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home',
-        'active' => 'home'
-    ]);
-});
 // LOGIN
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
 // REGISTER
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
-// About
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About',
-        'active' => 'about'
-    ]);
-});
+// HOME Group
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [HomeController::class, 'about']);
+// End
 //  GROUP ROUTING AUTH
 Route::middleware('auth')->group(function () {
     // Category
     Route::get('/category', [CategoryController::class, 'index']);
-    // Route::resource('/create-category', PanelCategoryController::class);
-    Route::get('/create-category', [PanelCategoryController::class, 'index']);
-    Route::post('/create-category', [PanelCategoryController::class, 'store']);
+    // Panel
+    Route::get('/panel', [PanelController::class, 'index'])->middleware('admin');
+    Route::resource('/create-category', PanelCategoryController::class)->except('create');
+    Route::resource('/create-materi', PanelMateriController::class)->except('create');
+    Route::resource('/create-latihan', PanelLatihanController::class)->except('create');
+    // End Panel
+    // MATERI
+    Route::get('/category/{category:slug}', [CategoryController::class, 'show']);
+    Route::get('/learn/{materi:slug}', [CategoryController::class, 'learn']);
     // End
-    Route::get('/latihan', function () {
-        return view('interface.latihan.index', [
-            'title' => 'Latihan',
-            'active' => 'latihan'
-        ]);
-    });
+    // End
+    Route::get('/latihan', [LatihanController::class, 'index']);
     Route::get('/papan-skor', function () {
         return view('interface.papan-skor.index', [
             'title' => 'Papan Skor',
@@ -72,36 +68,8 @@ Route::middleware('auth')->group(function () {
             'active' => 'setting'
         ]);
     });
-    // MATERI
-    Route::get('/materi', function () {
-        return view('interface.materi.index', [
-            'title' => 'Materi',
-            'active' => 'materi'
-        ]);
-    });
-    Route::get('/learn', function () {
-        return view('interface.materi.learn', [
-            'title' => 'Learn',
-            'active' => 'materi'
-        ]);
-    });
-    // End
-    // Panel
-    Route::get('/panel', function () {
-        return view('interface.panel.index', [
-            'title' => 'Panel',
-            'active' => 'panel',
-            'categories' => Category::all()
-        ]);
-    })->middleware('admin');
-    Route::get('/create-materi', function () {
-        return view('interface.panel.create-materi', [
-            'title' => 'Create Materi',
-            'active' => 'panel'
-        ]);
-    });
-    Route::post('/create-materi', [MateriController::class, 'store']);
-    // End Panel
+
+
     // Forum Diskusi
     Route::get('/forum-diskusi', function () {
         return view('interface.forum-diskusi.index', [

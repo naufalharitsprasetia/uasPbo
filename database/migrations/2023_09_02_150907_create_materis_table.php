@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('desc');
             $table->text('body');
-            $table->string('contoh_suara');
-            $table->string('text_suara');
+            $table->string('contoh_gambar')->nullable();
+            $table->string('contoh_suara')->nullable();
+            $table->string('text_suara')->nullable();
             $table->string('link_video')->nullable();
             $table->timestamps();
         });

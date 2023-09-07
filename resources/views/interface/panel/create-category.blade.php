@@ -25,7 +25,7 @@
                     class="form-control @error('slug')
                 is-invalid
                 @enderror" id="autoslug"
-                    name="slug" placeholder="Slug" readonly value="{{ old('slug') }}">
+                    name="slug" placeholder="Slug" disabled value="{{ old('slug') }}">
                 @error('slug')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -33,8 +33,7 @@
                 @enderror
             </div>
             <br>
-            <button type="submit" class="btn btn-primary">Create</button>
-            <button type="submit" class="btn btn-primary">Create Post</button>
+            <button type="submit" class="btn btn-primary">Create Category</button>
         </form>
     </div>
 @endsection

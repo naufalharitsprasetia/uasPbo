@@ -1,6 +1,6 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary position-fixed sidebar-materi overflow-x-auto">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="img/logoicon.png" alt="Logo" width="30" height="30"
+        <img src="/img/logoicon.png" alt="Logo" width="30" height="30"
             class="d-inline-block align-text-top mx-2" />
         <span class="fs-4 jockey-font">SIBETA</span>
     </a>
@@ -60,7 +60,7 @@
     <div class="dropup-center dropup">
         <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="img/profile.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="/img/profile.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>{{ auth()->user()->name }}</strong>
         </a>
         <ul class="dropdown-menu text-small shadow">

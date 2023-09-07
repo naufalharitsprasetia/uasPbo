@@ -21,7 +21,7 @@
         @foreach ($categories as $category)
             {{-- Card  --}}
             <div class="shadow card mb-3 mt-3 border-0 p-2 floating" style="width: 180px;">
-                <a href="/materi" class="text-decoration-none">
+                <a href="/category/{{ $category->slug }}" class="text-decoration-none">
                     <div class="d-flex flex-column">
                         <div class=" border-end bg-card rounded">
                             <img src="img/card-img3.png" class="img-fluid rounded-start " alt="...">

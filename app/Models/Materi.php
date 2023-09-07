@@ -17,6 +17,6 @@ class Materi extends Model
     }
     public function latihan()
     {
-        return $this->hasOne(Latihan::class);
+        return $this->hasMany(Latihan::class);
     }
 }

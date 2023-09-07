@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Materi;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,11 @@ class PanelMateriController extends Controller
     public function index()
     {
         //
+        return view('interface.panel.create-materi', [
+            'title' => 'Create Materi',
+            'active' => 'panel',
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -21,6 +27,10 @@ class PanelMateriController extends Controller
     public function create()
     {
         //
+        return view('interface.panel.create-materi', [
+            'title' => 'Create Materi',
+            'active' => 'panel'
+        ]);
     }
 
     /**
@@ -29,6 +39,26 @@ class PanelMateriController extends Controller
     public function store(Request $request)
     {
         //
+
+        $validatedData = $request->validate([
+            'judul' => 'required|max:255',
+            'slug' => 'required|unique:materis',
+            'contoh_gambar' => 'image|file|max:5120',
+            'category_id' => 'required',
+            'desc' => 'required|max:500',
+            'body' => 'required',
+            'contoh_suara' => 'file|nullable',
+            'text_suara' => 'nullable|max|100',
+            'link_video' => 'nullable|max:500'
+        ]);
+
+        if ($request->file('contoh_gambar')) {
+            $validatedData['contoh_gambar'] = $request->file('contoh_gambar')->store('post-images');
+        }
+
+        Materi::create($validatedData);
+
+        return redirect('/panel')->with('success', 'Materi baru telah ditambahkan !!');
     }
 
     /**
