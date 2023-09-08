@@ -4,13 +4,16 @@
     <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-success border-5">
         <button type="button" class="btn-close float-end" aria-label="Close"></button>
         <h1 class="fw-bold">Latihan | Izhar Haqiqi</h1>
-        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar  progress-bar-striped progress-bar-animated bg-success" style="width: 25%"></div>
+        <?php $pembagian = 100 / $latihans->total(); ?>
+        <h4>Total Soal : <?= $latihans->total() ?></h4>
+        <div class="progress" role="progressbar">
+            <div class="progress-bar  progress-bar-striped progress-bar-animated bg-success"
+                style="width: {{ $latihans->currentPage() * $pembagian }}%"></div>
         </div>
-        @foreach ($latihans as $latihan)
-            <form action="">
-                <h4 class="mt-3">{{ $loop->count }}. {{ $latihan->pertanyaan }}</h4>
+        <form action="" method="post">
+            @csrf
+            @foreach ($latihans as $latihan)
+                <h4 class="mt-3">{{ $latihans->currentPage() }}. {{ $latihan->pertanyaan }}</h4>
                 <div class="d-flex my-3 justify-center items-align-center flex-wrap">
                     @for ($i = 0; $i < 5; $i++)
                         <div class="form-check mx-1 display-4">
@@ -22,15 +25,19 @@
                         </div>
                     @endfor
                 </div>
-                <a class="btn btn-primary" href="#" role="button">Lompati</a>
-                {{-- <input class="btn btn-primary" type="submit" value="Lompati"> --}}
-                <input class="btn btn-primary ms-auto float-end" type="submit" value="Periksa   ">
-            </form>
-        @endforeach
-        <div class="">
-            <br>
-            {{ $latihans->links() }}
-        </div>
-
+            @endforeach
+            <a class="btn btn-primary" href="{{ $latihans->previousPageUrl() }}" role="button">Back</a>
+            <a class="btn btn-primary ms-auto float-end" href="{{ $latihans->nextPageUrl() }}" role="button">Next</a>
+            {{-- <input class="btn btn-primary" type="submit" value="Lompati"> --}}
+            @if ($latihans->currentPage() === $latihans->lastPage())
+                <div class="text-center ms-auto">
+                    <button class="btn btn-warning" type="submit">Periksa</button>
+                </div>
+            @endif
+        </form>
+    </div>
+    <div class="">
+        <br>
+        {{ $latihans->links() }}
     </div>
 @endsection

@@ -124,7 +124,7 @@ class DatabaseSeeder extends Seeder
         Latihan::create([
             'materi_id' => 1,
             'jenis_pertanyaan_id' => 1,
-            'pertanyaan' => '1. Jika Nun sukun bertemu dengan mim disebut ??'
+            'pertanyaan' => 'Jika Nun sukun bertemu dengan mim disebut ??'
         ]);
 
         Progress::create([
