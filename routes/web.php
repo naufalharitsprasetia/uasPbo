@@ -40,9 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/category', [CategoryController::class, 'index']);
     // Panel
     Route::get('/panel', [PanelController::class, 'index'])->middleware('admin');
-    Route::resource('/create-category', PanelCategoryController::class)->except('create');
-    Route::resource('/create-materi', PanelMateriController::class)->except('create');
-    Route::resource('/create-latihan', PanelLatihanController::class)->except('create');
+    Route::resource('/create-category', PanelCategoryController::class)->parameters(['create-category' => 'category:slug'])->except('create');
+    Route::resource('/create-latihan', PanelLatihanController::class)->parameters(['create-latihan' => 'latihan:slug'])->except('create');
+    Route::resource('/create-materi', PanelMateriController::class)->parameters(['create-materi' => 'materi:slug'])->except('create');
     // End Panel
     // MATERI
     Route::get('/category/{category:slug}', [CategoryController::class, 'show']);

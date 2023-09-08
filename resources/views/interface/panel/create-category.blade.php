@@ -20,12 +20,12 @@
                         {{ $message }}
                     </div>
                 @enderror
-                <label for="slug" class="form-label">Slug</label>
+                <label for="slug" class="form-label">Slug (Otomatis)</label>
                 <input type="text"
                     class="form-control @error('slug')
                 is-invalid
                 @enderror" id="autoslug"
-                    name="slug" placeholder="Slug" disabled value="{{ old('slug') }}">
+                    name="slug" placeholder="Slug" readonly value="{{ old('slug') }}">
                 @error('slug')
                     <div class="invalid-feedback">
                         {{ $message }}
