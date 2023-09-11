@@ -27,13 +27,22 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('bismillah'),
             'email' => 'naufal@gmail.com',
             'is_admin' => true,
+            'gender' => 'male'
         ]);
         User::create([
-            'name' => 'Mohamad',
+            'name' => 'Mohamad Farhat',
             'username' => 'fardanio',
             'password' => bcrypt('bismillah'),
             'email' => 'farhat@gmail.com',
             'is_admin' => true,
+            'gender' => 'male'
+        ]);
+        User::create([
+            'name' => 'Ustadzah Hanifah',
+            'username' => 'ustadzahhanifah',
+            'password' => bcrypt('bismillah'),
+            'email' => 'hanifah@gmail.com',
+            'gender' => 'female'
         ]);
 
         // Category
@@ -171,29 +180,86 @@ class DatabaseSeeder extends Seeder
         Latihan::create([
             'materi_id' => 1,
             'jenis_pertanyaan_id' => 1,
-            'pertanyaan' => 'Jika Nun sukun bertemu dengan mim disebut ??'
+            'pertanyaan' => 'Apa Artinya Idzhar ??'
         ]);
-
+        Latihan::create([
+            'materi_id' => 1,
+            'jenis_pertanyaan_id' => 1,
+            'pertanyaan' => 'Ada Berapa Huruf Halqi ??'
+        ]);
+        Latihan::create([
+            'materi_id' => 1,
+            'jenis_pertanyaan_id' => 1,
+            'pertanyaan' => 'Kenapa Disebut Halqi ??'
+        ]);
+        Jawaban::create([
+            'latihan_id' => 1,
+            'jawaban' => "Menerangkan/Menjelaskan",
+            'is_true' => true
+        ]);
+        Jawaban::create([
+            'latihan_id' => 1,
+            'jawaban' => "Memasukkan",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 1,
+            'jawaban' => "Membalik",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 1,
+            'jawaban' => "Menyamar",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 2,
+            'jawaban' => "5",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 2,
+            'jawaban' => "4",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 2,
+            'jawaban' => "6",
+            'is_true' => true
+        ]);
+        Jawaban::create([
+            'latihan_id' => 3,
+            'jawaban' => "Makhrajnya di Kerongkongan",
+            'is_true' => true
+        ]);
+        Jawaban::create([
+            'latihan_id' => 3,
+            'jawaban' => "Karena Dengung",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 3,
+            'jawaban' => "Hanya Sebuah Sebutan",
+        ]);
+        //
         Progress::create([
             'user_id' => 1,
+            'materi_id' => 1,
             'exp' => 20
         ]);
-
-        Jawaban::create([
-            'latihan_id' => 1,
-            'jawaban' => "Idzhar",
+        Progress::create([
+            'user_id' => 2,
+            'materi_id' => 1,
+            'exp' => 20
         ]);
-        Jawaban::create([
-            'latihan_id' => 1,
-            'jawaban' => "Iqlab",
+        Progress::create([
+            'user_id' => 1,
+            'materi_id' => 1,
+            'exp' => 30
         ]);
-        Jawaban::create([
-            'latihan_id' => 1,
-            'jawaban' => "Ikhfa",
+        Progress::create([
+            'user_id' => 3,
+            'materi_id' => 1,
+            'exp' => 40
         ]);
-        Jawaban::create([
-            'latihan_id' => 1,
-            'jawaban' => "Idghom",
+        Progress::create([
+            'user_id' => 3,
+            'materi_id' => 1,
+            'exp' => 40
         ]);
     }
 }

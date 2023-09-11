@@ -67,6 +67,11 @@ class PanelMateriController extends Controller
     public function show(Materi $materi)
     {
         //
+        return view('interface.panel.show-materi', [
+            'title' => 'Detail Materi',
+            'active' => 'panel',
+            'materi' => $materi
+        ]);
     }
 
     /**
@@ -123,5 +128,10 @@ class PanelMateriController extends Controller
     public function destroy(Materi $materi)
     {
         //
+        // if ($post->image) {
+        //     Storage::delete($post->image);
+        // }
+        Materi::destroy($materi->id);
+        return redirect('/panel')->with('success', 'Materi has been deleted!');
     }
 }

@@ -60,7 +60,7 @@
     <div class="dropup-center dropup">
         <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/img/profile.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="/img/profile_male.png" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>{{ auth()->user()->name }}</strong>
         </a>
         <ul class="dropdown-menu text-small shadow">

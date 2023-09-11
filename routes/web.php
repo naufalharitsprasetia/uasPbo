@@ -12,6 +12,8 @@ use App\Http\Controllers\PanelCategoryController;
 use App\Http\Controllers\PanelLatihanController;
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PanelMateriController;
+use App\Http\Controllers\ProgressController;
+use App\Models\Progress;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,14 +50,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/category/{category:slug}', [CategoryController::class, 'show']);
     Route::get('/learn/{materi:slug}', [CategoryController::class, 'learn']);
     // End
+    // Progress
+    Route::get('/papan-skor', [ProgressController::class, 'index']);
+    Route::post('/progress/add', [ProgressController::class, 'add']);
     // End
+    // Latihan
     Route::get('/latihan', [LatihanController::class, 'index']);
-    Route::get('/papan-skor', function () {
-        return view('interface.papan-skor.index', [
-            'title' => 'Papan Skor',
-            'active' => 'papan-skor'
-        ]);
-    });
+    Route::post('/proses-form', [LatihanController::class, 'proses']);
+    // 
     Route::get('/profil', function () {
         return view('interface.profil.index', [
             'title' => 'Profil',
@@ -68,7 +70,6 @@ Route::middleware('auth')->group(function () {
             'active' => 'setting'
         ]);
     });
-
 
     // Forum Diskusi
     Route::get('/forum-diskusi', function () {

@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('progress', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->integer('exp');
+            $table->foreignId('materi_id');
+            $table->integer('exp')->default(0);
             $table->timestamps();
         });
     }

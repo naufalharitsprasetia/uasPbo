@@ -33,10 +33,11 @@
                             <td>{{ $materi->desc }}</td>
                             <td>{{ $materi->category->name }}</td>
                             <td>
-                                <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
+                                <a href="/create-materi/{{ $materi->slug }}" class="badge bg-info "><i
+                                        class="bi bi-eye"></i></a>
                                 <a href="/create-materi/{{ $materi->slug }}/edit" class="badge bg-warning "><i
                                         class="bi bi-pencil"></i></a>
-                                <form action="" method="post" class="d-inline">
+                                <form action="/create-materi/{{ $materi->slug }}" method="post" class="d-inline">
                                     @method('delete')
                                     @csrf
                                     <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i

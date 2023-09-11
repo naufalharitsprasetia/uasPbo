@@ -8,7 +8,7 @@
     <div class="row">
         @foreach ($category->materis as $materi)
             <div class="col-9">
-                <div class="card mb-3 mx-3">
+                <div class="card mb-3 mx-3 border-2 border-primary">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/img/bg-isi-materi.png" class="img-fluid rounded-start" alt="">
@@ -18,7 +18,7 @@
                                 <h5 class="card-title fw-bold mt-1">{{ $materi->judul }}</h5>
                                 <hr>
                                 <p class="card-text">{{ $materi->desc }}</p>
-                                <a href="/learn/{{ $materi->slug }}" class="btn btn-primary mt-1 float-end">Mulai</a>
+                                <a href="/learn/{{ $materi->slug }}" class="btn btn-primary my-2 float-end">Mulai</a>
                             </div>
                         </div>
                     </div>

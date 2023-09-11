@@ -15,24 +15,7 @@
         <h3 class="text-uppercase text-decoration-underline">{{ $materi->judul }}</h3>
         {!! $materi->body !!}
         <br><br>
-        <hr>
-        <div class="text-center">
-            <h3>Apakah Kamu Sudah Memahami <br>
-                Apa Itu <b>{{ $materi->judul }} ?</b></h3>
-            <img src="/img/paham.png" alt="" width="300">
-            <br>
-        </div>
-        <div class="text-center">
-            <form action="/progress/add" method="post">
-                @csrf
-                <input type="hidden" name="exp" value="10">
-                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
-                <input type="hidden" name="materi_id" value="{{ $materi->id }}">
-                <button type="submit" class="btn btn-primary border border-white border-3 btn-lg "
-                    onclick="return confirm('Apakah Kamu Paham?')">Ya,
-                    Saya Paham</button>
-            </form>
-        </div>
+
     </div>
     <br>
     <script>

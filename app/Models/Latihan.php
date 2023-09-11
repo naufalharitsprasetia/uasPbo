@@ -18,7 +18,7 @@ class Latihan extends Model
     {
         return $this->belongsTo(Materi::class);
     }
-    public function jawaban()
+    public function jawabans()
     {
         return $this->hasMany(Jawaban::class);
     }
