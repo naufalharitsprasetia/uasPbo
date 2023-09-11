@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Latihan;
+use App\Models\Materi;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreLatihanRequest;
 use App\Http\Requests\UpdateLatihanRequest;
@@ -14,14 +15,22 @@ class LatihanController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() // Tambahkan parameter Request
+    public function index()
+    {
+        return view('interface.latihan.index', [
+            'title' => 'Latihan',
+            'active' => 'latihan',
+            'materis' => Materi::all(),
+        ]);
+    }
+    public function latihan(Materi $materi)
     {
 
         // Mendapatkan data latihan beserta jawaban-jawabannya
-        $latihans = Latihan::all();
+        $latihans = Latihan::where('materi_id', $materi->id)->get();
         $jawabans = Jawaban::all();
 
-        return view('interface.latihan.index', [
+        return view('interface.latihan.latihan', [
             'title' => 'Latihan',
             'active' => 'latihan',
             'latihans' => $latihans,

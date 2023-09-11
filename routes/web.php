@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
     // End
     // Latihan
     Route::get('/latihan', [LatihanController::class, 'index']);
+    Route::get('/latihan/{materi:slug}', [LatihanController::class, 'latihan']);
     Route::post('/proses-form', [LatihanController::class, 'proses']);
     // 
     Route::get('/profil', function () {

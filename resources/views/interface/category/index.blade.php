@@ -1,7 +1,6 @@
 @extends('interface.layouts.main')
 
 @section('container')
-    {{-- <h1>Hello World</h1> --}}
     {{-- Opening --}}
     <div class="card mx-4">
         <div class="card-header jockey-font">

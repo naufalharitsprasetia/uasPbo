@@ -36,11 +36,20 @@
                             <td><img src="img/profile_{{ $userProgress[0]->user->gender }}.png" alt=""
                                     width="32" height="32"
                                     class="rounded-circle me-3">{{ $userProgress[0]->user->username }}</td>
+                            @if ($userProgress[0]->user->username === auth()->user()->username)
+                                @php
+                                    $myExp = $totalXP;
+                                    $myUrutan = $loop->iteration;
+                                @endphp
+                            @endif
                             <td>{{ $totalXP }} XP</td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <br><br>
+            <h4>My Position : {{ $myUrutan }} from {{ count($groupedProgress) }}</h4>
+            <h4>My Score : {{ $myExp }}</h4>
         </div>
     </div>
 @endsection
