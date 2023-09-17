@@ -20,7 +20,8 @@
                 </ul>
             </div>
         @endif
-
+        {{--  --}}
+        <?php $benar = 5; ?>
         <hr>
         <form action="/proses-form" method="post">
             @csrf
@@ -39,6 +40,7 @@
                     <h4 class="mt-3">{{ $loop->iteration }}. {{ $latihan->pertanyaan }}</h4>
                     {{-- Tampilkan jawaban yang telah dijawab jika ada --}}
                     @if ($jawabanTerjawab === $jawabanBenar)
+                        <?php $benar += 10; ?>
                         <div class="bg-success btn btn-success p-2">
                             <h5 class="text-white">Jawaban Anda : {{ $jawabanTerjawab }}</h5>
                         </div>
@@ -71,7 +73,8 @@
             @if (session()->has('messages'))
                 {{-- Jika Belum Jawab --}}
                 <div class="text-center">
-                    <a href="/selesai-latihan?materi_id={{ $materi->id }}" class="btn btn-primary ms-auto">Selesai</a>
+                    <a href="/selesai-latihan?materi_id={{ $materi->id }}&benar={{ $benar }}"
+                        class="btn btn-primary ms-auto">Selesai</a>
                 </div>
             @else
                 <div class="text-center">

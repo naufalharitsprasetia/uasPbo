@@ -1,20 +1,21 @@
 <?php
 
 use App\Models\Category;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MateriController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LatihanController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\PanelCategoryController;
-use App\Http\Controllers\PanelLatihanController;
-use App\Http\Controllers\PanelController;
-use App\Http\Controllers\PanelMateriController;
-use App\Http\Controllers\ProfilController;
-use App\Http\Controllers\ProgressController;
 use App\Models\Progress;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PanelController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\LatihanController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PanelMateriController;
+use App\Http\Controllers\PanelJawabanController;
+use App\Http\Controllers\PanelLatihanController;
+use App\Http\Controllers\PanelCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/create-category', PanelCategoryController::class)->parameters(['create-category' => 'category:slug'])->except('create');
     Route::resource('/create-latihan', PanelLatihanController::class)->parameters(['create-latihan' => 'latihan'])->except('create');
     Route::resource('/create-materi', PanelMateriController::class)->parameters(['create-materi' => 'materi:slug'])->except('create');
+    // Jawaban Panel
+    Route::resource('/create-jawaban', PanelJawabanController::class)->parameters(['create-jawaban' => 'jawaban'])->except('create');
     // End Panel
     // MATERI
     Route::get('/category/{category:slug}', [CategoryController::class, 'show']);

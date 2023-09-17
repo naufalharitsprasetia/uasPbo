@@ -4,7 +4,8 @@
     <div class="panel-container bg-white rounded p-4 mx-3">
         <h1>Panel</h1>
         @if (session()->has('success'))
-            <div class="alert alert-success col-lg-12" role="alert">
+            <div class="alert alert-success col-lg-12 alert-dismissible fade show" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 {{ session('success') }}
             </div>
         @endif

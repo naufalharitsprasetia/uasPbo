@@ -29,6 +29,6 @@ class ProgressController extends Controller
         ]);
         Progress::create($validatedData);
 
-        return redirect('/papan-skor')->with('success', 'Selamat !! EXP Anda Bertambah 10');
+        return redirect('/papan-skor')->with('tambah', 'Selamat !! EXP Anda Bertambah 10 ');
     }
 }

@@ -8,7 +8,7 @@
         </div>
         <div class="card-body">
             <h5 class="card-title">Ilmu Tajwid</h5>
-            <p class="card-text">Ilmu Tajwid adalah ilmu yang mempelajari tata acara membaca al-qur'an yang baik dan
+            <p class="card-text">Ilmu Tajwid adalah ilmu yang mempelajari tata cara membaca al-qur'an yang baik dan
                 benar.</p>
             <a href="#" class="btn btn-primary"><i class="fa-solid fa-book"></i> BUKU PANDUAN</a>
         </div>

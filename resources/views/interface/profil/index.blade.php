@@ -22,9 +22,15 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="email"
+                    value="{{ auth()->user()->email }}" disabled>
+
+            </div>
+            <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control  @error('username') is-invalid @enderror" id="username"
-                    name="username" placeholder="username" value="{{ old('name', auth()->user()->username) }}">
+                    name="username" placeholder="username" value="{{ old('username', auth()->user()->username) }}">
                 @error('username')
                     <div class="invalid-feedback">
                         {{ $message }}

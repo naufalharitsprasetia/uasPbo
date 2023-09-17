@@ -23,12 +23,18 @@ class ProfilController extends Controller
             'password' => 'nullable|min:5|max:255'
         ];
 
-        if ($request->username != auth()->user()->username) {
+        if ($request->input('username') != auth()->user()->username) {
             $rules['username'] = ['required', 'min:3', 'max:255', 'unique:users'];
         }
 
         $validatedData = $request->validate($rules);
-        $validatedData['password'] = Hash::make($validatedData['password']);
+
+        if ($request->input('password') != null) {
+            $validatedData['password'] = Hash::make($validatedData['password']);
+        } else {
+            $validatedData['password'] = auth()->user()->password;
+        }
+        // dd($validatedData);
 
         User::where('id', auth()->user()->id)->update($validatedData);
 

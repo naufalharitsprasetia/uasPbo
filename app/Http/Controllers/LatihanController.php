@@ -82,7 +82,7 @@ class LatihanController extends Controller
             $jawaban = Jawaban::where('id', $jawabanId)->where('is_true', true)->first();
             if ($jawaban) {
                 // Jawaban benar
-                $messages[$pertanyaanId] = 'Soal no ' . $pertanyaanId . ' Benar.';
+                $messages[$pertanyaanId] = 'Soal no ' . $pertanyaanId . ' Benar. (10 Exp)';
                 $id_terjawab[$pertanyaanId] = $jawabanId;
             } else {
                 // Jawaban salah
@@ -106,13 +106,13 @@ class LatihanController extends Controller
         //         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         //         <input type="hidden" name="materi_id" value="{{ $materi->id }}">
         $items = [
-            'exp' => 20,
+            'exp' => intval($_GET['benar']),
             'user_id' => auth()->user()->id,
             'materi_id' => intval($_GET['materi_id'])
         ];
         // dd($items);
         Progress::create($items);
 
-        return redirect('/papan-skor')->with('tambah', 'Selamat !!! Exp Anda Bertambah 20 !!');
+        return redirect('/papan-skor')->with('tambah', "Selamat !!! Exp Anda Bertambah " . $items['exp'] . " !!");
     }
 }

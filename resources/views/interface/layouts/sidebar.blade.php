@@ -56,7 +56,24 @@
             <hr>
         @endcan
     </ul>
-    <br><br><br><br>
+    {{-- Sound Start --}}
+    <div class="sound-body">
+        <audio id="player" src="/audio/alhijrotu.mp3"></audio>
+        <div class="player">
+            <div class="control">
+                <i class="fa-solid fa-play" id="playbtn"></i>
+            </div>
+            <div class="info">
+                Music
+                <div class="bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div id="current">0:00</div>
+        </div>
+    </div>
+    {{-- Sound End --}}
+    <br><br><br>
     <div class="dropup-center dropup">
         <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">

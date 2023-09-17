@@ -1,0 +1,65 @@
+.sound-body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.35s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --bg: #613594;
+    color: white;
+}
+.player {
+    width: 440px;
+    background-color: var(--bg);
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    padding: 2px 8px;
+    position: relative;
+    border-radius: 64px;
+}
+.control,
+#current {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#playbtn {
+    font-size: 12px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 0, 255);
+    cursor: pointer;
+}
+#playbtn:hover {
+    -webkit-text-stroke-color: rgb(255, 0, 255);
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+#current {
+    text-align: right;
+}
+.bar {
+    --space: -2px;
+    background-color: #24242424;
+    overflow: hidden;
+    left: var(--space);
+    right: var(--space);
+    top: var(--space);
+    bottom: var(--space);
+    position: absolute;
+    border-radius: 64px;
+    z-index: -2;
+}
+#progress {
+    display: block;
+    width: var(--progress, 0%);
+    background-color: rgb(255, 0, 255);
+    transition: all 1s linear;
+    height: 100%;
+}

@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <!-- Own Style -->
     <link rel="stylesheet" href="/css/style.css" />
+    {{-- Sound Style --}}
+    <link rel="stylesheet" href="/css/sound.css" />
 
 <body>
     {{-- @include('templates.navbar') --}}
@@ -44,11 +46,13 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
     {{-- Own Javascript --}}
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
+    {{-- Sound Javascript --}}
+    <script src="/js/sound.js"></script>
     {{-- Sidebars Javascript --}}
-    <script src="js/sidebars.js"></script>
+    <script src="/js/sidebars.js"></script>
     {{-- Trix --}}
-    <script src="js/attachments.js"></script>
+    <script src="/js/attachments.js"></script>
 </body>
 
 </html>

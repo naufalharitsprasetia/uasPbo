@@ -3,18 +3,23 @@
 @section('container')
     <div class="panel-container bg-white rounded p-4 mx-3">
         <h2 class="text-decoration-underline">Jawabans Of Pertanyaan</h2>
+        @if (session()->has('success'))
+            <div class="alert alert-success col-lg-12  alert-dismissible fade show" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="latihan-list">
             <h3>Pertanyaan : <span class="text-success">{{ $latihan->pertanyaan }}</span></h3>
             <br>
-
-            <a href="/create-jawaban" class="btn btn-success mb-2">Create Jawaban</a>
+            <a href="/create-jawaban?latihan_id={{ $latihan->id }}" class="btn btn-success mb-2">Create Jawaban</a>
             <table class="table">
                 <thead class="table-success">
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Jawaban</th>
-                        <th scope="col">Is True ?</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Kebenaran</th>
+                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
