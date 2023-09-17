@@ -2,12 +2,12 @@
 
 @section('container')
     <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-success border-5">
-        <button type="button" class="btn-close float-end" aria-label="Close"></button>
+
         <h1 class="fw-bold">Latihan | Izhar Haqiqi</h1>
         <h4>Total Soal : {{ count($latihans) }}</h4>
-        @if (session()->has('loginError'))
+        @if (session()->has('latihanError'))
             <div class="alert alert-danger alert-dismissible fade show fw-normal fs-6" role="alert">
-                {{ session('loginError') }}
+                {{ session('latihanError') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
@@ -24,6 +24,7 @@
         <hr>
         <form action="/proses-form" method="post">
             @csrf
+            <input type="hidden" name="jumlah_pertanyaan" value="{{ count($latihans) }}">
             @foreach ($latihans as $latihan)
                 @php
                     // Ambil jawaban yang telah dijawab dari session
@@ -70,10 +71,11 @@
             @if (session()->has('messages'))
                 {{-- Jika Belum Jawab --}}
                 <div class="text-center">
-                    <a href="/jawab-selesai" class="btn btn-primary ms-auto">Selesai</a>
+                    <a href="/selesai-latihan?materi_id={{ $materi->id }}" class="btn btn-primary ms-auto">Selesai</a>
                 </div>
             @else
                 <div class="text-center">
+                    <input type="hidden" name="materi_slug" value="{{ $materi->slug }}">
                     <button class="btn btn-warning ms-auto" type="submit">Periksa</button>
                 </div>
             @endif

@@ -3,13 +3,14 @@
 @section('container')
     <div class="latihan-container bg-white rounded p-4 mx-3">
         <h1><i class="fa-solid fa-star fa-spin me-1" style="color: #ffa50a;"></i> Papan Skor</h1>
-        <br><br>
+        <br>
         <div class="materi-list">
-            @if (session()->has('success'))
+            @if (session()->has('tambah'))
                 <div class="alert alert-success col-lg-12" role="alert">
-                    {{ session('success') }}
+                    {{ session('tambah') }}
                 </div>
             @endif
+
             <table class="table">
                 <thead class="table-success">
                     <tr>

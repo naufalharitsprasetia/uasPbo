@@ -12,6 +12,7 @@ use App\Http\Controllers\PanelCategoryController;
 use App\Http\Controllers\PanelLatihanController;
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PanelMateriController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProgressController;
 use App\Models\Progress;
 
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
     // Panel
     Route::get('/panel', [PanelController::class, 'index'])->middleware('admin');
     Route::resource('/create-category', PanelCategoryController::class)->parameters(['create-category' => 'category:slug'])->except('create');
-    Route::resource('/create-latihan', PanelLatihanController::class)->parameters(['create-latihan' => 'latihan:slug'])->except('create');
+    Route::resource('/create-latihan', PanelLatihanController::class)->parameters(['create-latihan' => 'latihan'])->except('create');
     Route::resource('/create-materi', PanelMateriController::class)->parameters(['create-materi' => 'materi:slug'])->except('create');
     // End Panel
     // MATERI
@@ -58,20 +59,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/latihan', [LatihanController::class, 'index']);
     Route::get('/latihan/{materi:slug}', [LatihanController::class, 'latihan']);
     Route::post('/proses-form', [LatihanController::class, 'proses']);
-    // 
-    Route::get('/profil', function () {
-        return view('interface.profil.index', [
-            'title' => 'Profil',
-            'active' => 'profil'
-        ]);
-    });
+    Route::get('/selesai-latihan', [LatihanController::class, 'selesai']);
+    // Profil
+    Route::get('/profil', [ProfilController::class, 'index']);
+    Route::post('/profil', [ProfilController::class, 'update']);
+    // Setting
     Route::get('/setting', function () {
         return view('interface.setting.index', [
             'title' => 'Setting',
             'active' => 'setting'
         ]);
     });
-
     // Forum Diskusi
     Route::get('/forum-diskusi', function () {
         return view('interface.forum-diskusi.index', [

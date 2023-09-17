@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Naufal Harits',
             'username' => 'naufalharis',
-            'password' => bcrypt('bismillah123#'),
+            'password' => bcrypt('bismillah123'),
             'email' => 'naufal@gmail.com',
             'is_admin' => true,
             'gender' => 'male'
@@ -32,18 +32,19 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Mohamad Farhat',
             'username' => 'fardanio',
-            'password' => bcrypt('bismillah123#'),
+            'password' => bcrypt('bismillah123'),
             'email' => 'farhat@gmail.com',
             'is_admin' => true,
             'gender' => 'male'
         ]);
         User::create([
-            'name' => 'Ustadzah Hanifah',
-            'username' => 'ustadzahhanifah',
+            'name' => 'Fulanah',
+            'username' => 'fulanah',
             'password' => bcrypt('bismillah'),
-            'email' => 'hanifah@gmail.com',
+            'email' => 'fulanah@gmail.com',
             'gender' => 'female'
         ]);
+        User::factory(10);
         // Category
         // 1
         Category::create([

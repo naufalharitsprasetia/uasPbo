@@ -79,6 +79,21 @@
                                         </div>
                                     @enderror
                                 </div>
+                                <div class="">
+                                    <label for="gender" class="form-label">Jenis Kelamin : </label>
+
+                                    <select class="form-control @error('gender') is-invalid @enderror" name="gender"
+                                        id="gender">
+                                        <option value="male">Laki-Laki</option>
+                                        <option value="female">Perempuan </option>
+                                    </select>
+                                    @error('gender')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                                <br>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </button>

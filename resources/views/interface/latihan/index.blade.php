@@ -3,6 +3,7 @@
 @section('container')
     <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-danger border-5">
         <h1>Latihan</h1>
+
     </div>
     <br>
     <div class="row gap-4 justify-content-center me-4">

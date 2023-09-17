@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jawaban;
 use App\Models\JenisPertanyaan;
 use App\Models\Latihan;
 use App\Models\Materi;
@@ -57,6 +58,12 @@ class PanelLatihanController extends Controller
     public function show(Latihan $latihan)
     {
         //
+        return view('interface.panel.show-latihan', [
+            'title' => 'Latihan',
+            'active' => 'panel',
+            'jawabans' => Jawaban::where('latihan_id', $latihan->id)->get(),
+            'latihan' => $latihan
+        ]);
     }
 
     /**

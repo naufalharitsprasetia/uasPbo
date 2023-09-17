@@ -1,7 +1,7 @@
 @extends('interface.layouts.main')
 
 @section('container')
-    <div class="latihan-container bg-white rounded p-4 mx-3">
+    <div class="panel-container bg-white rounded p-4 mx-3">
         <h1>Panel</h1>
         @if (session()->has('success'))
             <div class="alert alert-success col-lg-12" role="alert">
@@ -101,8 +101,10 @@
                             <td>{{ $latihan->materi->judul }}</td>
                             <td>{{ $latihan->jenis_pertanyaan->jenis_pertanyaan }}</td>
                             <td>
-                                <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
-                                <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
+                                <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-info "><i
+                                        class="bi bi-eye"></i></a>
+                                <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-warning "><i
+                                        class="bi bi-pencil"></i></a>
                                 <form action="" method="post" class="d-inline">
                                     @method('delete')
                                     @csrf

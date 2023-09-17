@@ -36,7 +36,9 @@
                     <img src="img/bg-learn.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Materi</h5>
-                        <p class="card-text text-center">Materi-Materi Tajwid Dijelaskan Secara Pengertian dan Contoh2.</p>
+                        <p class="card-text text-center">Materi Tajwid yang Komprehensif: Situs ini menyediakan akses ke
+                            materi Tajwid yang mendalam dan lengkap, membantu pengguna untuk memahami dengan baik
+                            aturan-aturan penting dalam membaca Al-Quran.</p>
                     </div>
                 </div>
             </div>
@@ -46,9 +48,9 @@
                     <img src="img/bg-trainning.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Latihan</h5>
-                        <p class="card-text text-center">SIBETA menyediakan beberapa latihan untuk menguji seberapa paham
-                            seseorang akan
-                            pelajaran yang sudah dipelajari.</p>
+                        <p class="card-text text-center">Latihan Interaktif: Pengguna dapat mengasah keterampilan Tajwid
+                            mereka melalui berbagai latihan interaktif yang disediakan oleh situs ini, sehingga mereka dapat
+                            meningkatkan bacaan Al-Quran mereka dengan cepat.</p>
                     </div>
                 </div>
             </div>
@@ -58,10 +60,9 @@
                     <img src="img/bg-diskusi.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center fw-bold">Forum Diskusi</h5>
-                        <p class="card-text text-center">Berdiskusi dengan para expert, alumni, atau siswa lainnya terkait
-                            kelas Belajar
-                            Tajwid di SIBETA.
-
+                        <p class="card-text text-center">Forum Diskusi yang Aktif: Situs ini memiliki forum diskusi yang
+                            aktif, yang memungkinkan pengguna untuk berinteraksi dengan sesama pelajar Tajwid, bertukar
+                            pengalaman, dan mendapatkan bantuan langsung dari ahli Tajwid.
                         </p>
                     </div>
                 </div>
@@ -71,7 +72,28 @@
     <br>
     <!-- End -->
     <br>
-    <div class="contatiner">
+    <div class="contatiner p-5">
         <h2 class="text-center">Contoh Tampilan SIBETA</h2>
+        <div id="carouselExample" class="carousel slide p-5">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slide1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slide3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 @endsection
