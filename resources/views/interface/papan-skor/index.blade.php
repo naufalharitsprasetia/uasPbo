@@ -14,7 +14,7 @@
             @if (session()->has('tambah'))
                 <div class="alert alert-primary col-lg-12 alert-dismissible fade show" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <h1 class="text-center"><i class="fa-solid fa-person-praying"></i> Doa Setelah Belajar</h1>
+                    <h1 class="text-center"><i class="fa-solid fa-hands-praying"></i> Doa Setelah Belajar</h1>
                     <h3 class="text-end">اَللّٰهُمَّ إِنِّيْ أَسْتَوْدِعُكَ مَا عَلَّمْتَنِيْهِ، فَارْدُدْهُ إِلَيَّ
                         عِنْدَ حَاجَتِيْ
                         إِلَيْهِ وَلَا تُنْسِنِيْهِ يَا رَبَّ الْعَالَمِيْنَ.</h3>

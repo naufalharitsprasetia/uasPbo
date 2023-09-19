@@ -61,25 +61,39 @@ class LatihanController extends Controller
         $jumlah_soal = intval($request->input("jumlah_pertanyaan"));
         $jumlah_dijawab = count($coba);
 
-        // dd($jumlah_soal);
-
         if ($jumlah_dijawab !== $jumlah_soal) {
             return back()->with('latihanError', 'Jawab Semua Soal Yang Ada!');
         }
+        $speech = $request->input('speech');
+        // dd($speech);
 
         // Loop melalui jawaban yang diberikan
         foreach ($request->input('jawaban') as $pertanyaanId => $jawabanId) {
             // ...
-            // Simpan jawaban yang telah dijawab dalam session
-            // Simpan jawaban yang dijawab dan jawaban yang benar dalam session
-            $jawabanDijawab = Jawaban::where('id', $jawabanId)->value('jawaban');
-            $jawabanBenar = Jawaban::where('latihan_id', $pertanyaanId)->where('is_true', true)->value('jawaban');
-
-            session()->put('jawabanTerjawab.' . $pertanyaanId, $jawabanDijawab);
-            session()->put('jawabanBenar.' . $pertanyaanId, $jawabanBenar);
+            // Ambil latihan yang terkait dengan jawaban ini
+            $jenisPertanyaan = Jawaban::find($jawabanId)->latihan->jenis_pertanyaan_id;
+            // dd($jenisPertanyaan);
+            //  1 = Multiple Choice , 2 = Speech , 3 = Listening
+            // Logika Speech
+            if ($jenisPertanyaan == 2) {
+                $jawabanBenar = Jawaban::where('latihan_id', $pertanyaanId)->where('is_true', true)->value('jawaban');
+                $jawabanDijawab = $speech;
+                session()->put('jawabanTerjawab.' . $pertanyaanId, $jawabanDijawab);
+                session()->put('jawabanBenar.' . $pertanyaanId, $jawabanBenar);
+            } else {
+                $jawabanDijawab = Jawaban::where('id', $jawabanId)->value('jawaban');
+                $jawabanBenar = Jawaban::where('latihan_id', $pertanyaanId)->where('is_true', true)->value('jawaban');
+                // Simpan jawaban yang telah dijawab dalam session
+                // Simpan jawaban yang dijawab dan jawaban yang benar dalam session
+                session()->put('jawabanTerjawab.' . $pertanyaanId, $jawabanDijawab);
+                session()->put('jawabanBenar.' . $pertanyaanId, $jawabanBenar);
+            }
 
             // Periksa apakah jawaban tersebut benar (is_true = true)
             $jawaban = Jawaban::where('id', $jawabanId)->where('is_true', true)->first();
+            if ($speech == $jawabanBenar) {
+                $jawaban = true;
+            }
             if ($jawaban) {
                 // Jawaban benar
                 $messages[$pertanyaanId] = 'Soal no ' . $pertanyaanId . ' Benar. (10 Exp)';
@@ -91,6 +105,7 @@ class LatihanController extends Controller
             }
         }
 
+        // dd($request->input('jawaban'));
         // Set pesan-pesan ke dalam session
         session()->flash('messages', $messages);
         session()->flash('id_terjawab', $id_terjawab);

@@ -14,6 +14,42 @@
         <a href="/create-latihan" class="btn btn-success mb-2">Create Latihan</a>
         <br>
         <br>
+        <div class="latihan-list">
+            <h2>Latihan List</h2>
+            <table class="table">
+                <thead class="table-success">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Pertanyaan</th>
+                        <th scope="col">Materi</th>
+                        <th scope="col">Jenis Pertanyaan</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($latihans as $latihan)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $latihan->pertanyaan }}</td>
+                            <td>{{ $latihan->materi->judul }}</td>
+                            <td>{{ $latihan->jenis_pertanyaan->jenis_pertanyaan }}</td>
+                            <td>
+                                <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-info "><i
+                                        class="bi bi-eye"></i></a>
+                                <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
+                                <form action="" method="post" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
+                                            class="bi bi-x-circle"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+
+                </tbody>
+            </table>
+        </div>
         <div class="materi-list">
             <h2>Materi List</h2>
             <table class="table">
@@ -82,42 +118,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="latihan-list">
-            <h2>Latihan List</h2>
-            <table class="table">
-                <thead class="table-success">
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Pertanyaan</th>
-                        <th scope="col">Materi</th>
-                        <th scope="col">Jenis Pertanyaan</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($latihans as $latihan)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $latihan->pertanyaan }}</td>
-                            <td>{{ $latihan->materi->judul }}</td>
-                            <td>{{ $latihan->jenis_pertanyaan->jenis_pertanyaan }}</td>
-                            <td>
-                                <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-info "><i
-                                        class="bi bi-eye"></i></a>
-                                <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-warning "><i
-                                        class="bi bi-pencil"></i></a>
-                                <form action="" method="post" class="d-inline">
-                                    @method('delete')
-                                    @csrf
-                                    <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
-                                            class="bi bi-x-circle"></i></button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
 
-                </tbody>
-            </table>
-        </div>
     </div>
 @endsection

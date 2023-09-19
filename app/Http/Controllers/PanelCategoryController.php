@@ -12,13 +12,11 @@ class PanelCategoryController extends Controller
      */
     public function index()
     {
-        //
         return view('interface.panel.create-category', [
             'title' => 'Create Category',
             'active' => 'panel'
         ]);
     }
-
     /**
      * Show the form for creating a new resource.
      */

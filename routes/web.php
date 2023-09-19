@@ -80,4 +80,7 @@ Route::middleware('auth')->group(function () {
             'active' => 'forum-diskusi'
         ]);
     });
+    Route::get('/coba-speech', function () {
+        return view('coba-speech');
+    });
 });

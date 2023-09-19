@@ -106,6 +106,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Waqaf',
             'slug' => 'waqaf'
         ]);
+        // 13
+        Category::create([
+            'name' => 'Lain-Lain',
+            'slug' => 'lain-lain'
+        ]);
         JenisPertanyaan::create([
             'jenis_pertanyaan' => 'Multiple Choice'
         ]);
@@ -127,6 +132,8 @@ class DatabaseSeeder extends Seeder
                         <blockquote>Contohnya : </blockquote>     <blockquote>غفور حليم ، سميع عليم ، منه</blockquote>
                         dan lain sebagainya. <br><br> - Keterangan:  Idzhar artinya : menerangkan atau menjelaskan.
                         Halqi artinya : kerongkongan.",
+            "contoh_suara" => 'izhar_halqi',
+            "text_suara" => 'غفور حليم'
         ]);
         // 2
         Materi::create([

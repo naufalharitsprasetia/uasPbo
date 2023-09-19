@@ -1,5 +1,4 @@
-/** @format */
-
+// SOUND JS
 var player = document.getElementById("player");
 let progress = document.getElementById("progress");
 let playbtn = document.getElementById("playbtn");
