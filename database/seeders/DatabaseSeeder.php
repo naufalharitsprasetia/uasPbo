@@ -343,6 +343,16 @@ class DatabaseSeeder extends Seeder
             'jenis_pertanyaan_id' => 1,
             'pertanyaan' => 'Kenapa Disebut Halqi ??'
         ]);
+        Latihan::create([
+            'materi_id' => 1,
+            'jenis_pertanyaan_id' => 2,
+            'pertanyaan' => 'Sebukan Kalimat Berikut ....'
+        ]);
+        Latihan::create([
+            'materi_id' => 1,
+            'jenis_pertanyaan_id' => 3,
+            'pertanyaan' => 'Dengarkan Kalimat Berikut ...'
+        ]);
         Jawaban::create([
             'latihan_id' => 1,
             'jawaban' => "Menerangkan/Menjelaskan",
@@ -385,6 +395,30 @@ class DatabaseSeeder extends Seeder
         Jawaban::create([
             'latihan_id' => 3,
             'jawaban' => "Hanya Sebuah Sebutan",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 4,
+            'jawaban' => "	ُسَمِيْعٌ عَلِيْم",
+
+        ]);
+        Jawaban::create([
+            'latihan_id' => 4,
+            'jawaban' => "سميع عليم",
+            'is_true' => true
+        ]);
+        Jawaban::create([
+            'latihan_id' => 5,
+            'jawaban' => "سميع عليم",
+        ]);
+        Jawaban::create([
+            'latihan_id' => 5,
+            'jawaban' => "من نور",
+        ]);
+        //
+        Jawaban::create([
+            'latihan_id' => 5,
+            'jawaban' => "غفور حليم",
+            'is_true' => true
         ]);
         //
         Progress::create([

@@ -12,7 +12,7 @@
                 benar.</p>
             <a href="#" class="btn btn-primary"><i class="fa-solid fa-book"></i> BUKU PANDUAN</a>
         </div>
-        <div class="alert alert-danger mx-4" role="alert">
+        <div class="alert alert-danger mx-3" role="alert">
             Aplikasi Ini Masih Dalam Tahap Pengembangan, Mohon Dimaklukmi Jika Masih Banyak Yang Kurang 🙏🙏🙏
         </div>
     </div>
