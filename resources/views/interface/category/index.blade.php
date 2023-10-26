@@ -26,7 +26,13 @@
                 <a href="/category/{{ $category->slug }}" class="text-decoration-none">
                     <div class="d-flex flex-column">
                         <div class=" border-end bg-card rounded">
-                            <img src="img/card-img3.png" class="img-fluid rounded-start " alt="...">
+                            @if ($category->name && substr($category->name, 0, 1) === 'I')
+                                <img src="img/rafi1.jpg" class="img-fluid rounded-start " alt="...">
+                            @elseif ($category->name && substr($category->name, 0, 1) === 'M')
+                                <img src="img/rafi2.jpg" class="img-fluid rounded-start " alt="...">
+                            @else
+                                <img src="img/card-img3.png" class="img-fluid rounded-start " alt="...">
+                            @endif
                         </div>
                         <hr>
                         <h5 class="card-title text-dark fw-bold text-center">{{ $category->name }}</h5>
