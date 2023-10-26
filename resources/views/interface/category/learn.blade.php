@@ -36,8 +36,8 @@
         #playbtn2 {
             /* font-size: 12px; */
             /* color: transparent;
-                                                                                                                                                            -webkit-text-stroke-width: 1px;
-                                                                                                                                                            -webkit-text-stroke-color: rgb(255, 0, 255); */
+                                                                                                                                                                -webkit-text-stroke-width: 1px;
+                                                                                                                                                                -webkit-text-stroke-color: rgb(255, 0, 255); */
             cursor: pointer;
         }
 
@@ -85,7 +85,7 @@
         style="text-shadow: 0px 0px 7px  black">
         <div class="text-center">
             <h2 class="text-center">Ayok Belajar !! 👨‍🏫</h2>
-            <img src="/img/ayok-belajar.png" alt="" width="350">
+            <img src="/img/ayok-belajar.png" class="image-learn" alt="" width="350">
         </div>
         <br>
         <h3 class="text-uppercase text-decoration-underline">{{ $materi->judul }}</h3>

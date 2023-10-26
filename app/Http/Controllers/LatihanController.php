@@ -13,15 +13,13 @@ use Illuminate\Support\Facades\Validator;
 
 class LatihanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return view('interface.latihan.index', [
             'title' => 'Latihan',
             'active' => 'latihan',
             'materis' => Materi::all(),
+            'latihans' => Latihan::all(),
         ]);
     }
     public function latihan(Materi $materi)

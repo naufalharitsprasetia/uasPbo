@@ -23,6 +23,8 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <!-- Own Style -->
     <link rel="stylesheet" href="/css/style.css" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 
 <body>
     @include('templates.navbar')

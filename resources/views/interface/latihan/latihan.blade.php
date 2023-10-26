@@ -36,8 +36,8 @@
         #playbtn2 {
             /* font-size: 12px; */
             /* color: transparent;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -webkit-text-stroke-width: 1px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -webkit-text-stroke-color: rgb(255, 0, 255); */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -webkit-text-stroke-width: 1px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -webkit-text-stroke-color: rgb(255, 0, 255); */
             cursor: pointer;
         }
 
@@ -79,7 +79,7 @@
     </style>
     {{--  --}}
     <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-75 border-success border-5">
-        <h1 class="fw-bold">Latihan | Izhar Haqiqi</h1>
+        <h1 class="fw-bold">Latihan | {{ $materi->judul }}</h1>
         <h4>Total Soal : {{ count($latihans) }}</h4>
         @if (session()->has('latihanError'))
             <div class="alert alert-danger alert-dismissible fade show fw-normal fs-6" role="alert">

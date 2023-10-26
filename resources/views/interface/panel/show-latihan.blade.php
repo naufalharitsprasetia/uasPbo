@@ -35,9 +35,10 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
-                                <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
-                                <form action="" method="post" class="d-inline">
+                                {{-- <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a> --}}
+                                <a href="/create-jawaban/{{ $jawaban->id }}/edit" class="badge bg-warning "><i
+                                        class="bi bi-pencil"></i></a>
+                                <form action="/create-jawaban/{{ $jawaban->id }}" method="post" class="d-inline">
                                     @method('delete')
                                     @csrf
                                     <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i

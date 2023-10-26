@@ -1,7 +1,7 @@
 @extends('templates.main')
 @section('container')
     {{-- Cover --}}
-    <div class="cover-bg">
+    {{-- <div class="cover-bg">
         <div class="container-fluid d-flex bg-cover justify-content-center align-items-center text-center">
             <div class="d-flex flex-column ">
                 <h1 class="text-center fw-bolder jockey-font jf-shadow display-1">SIBETA</h1>
@@ -9,9 +9,22 @@
             </div>
         </div>
     </div>
-    {{-- End Cover --}}
+    End Cover --}}
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1 class="jockey-font">SI<span>BETA</span></h1>
+            <h2 class="jockey-font">
+                Situs Pembelajaran Tajwid
+            </h2>
+            <a href="#about" class="cta text-decoration-none">Detail</a>
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
     <!-- Apa itu SIBETA -->
-    <div class="row desc-container p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="row desc-container p-5 mb-4 bg-body-tertiary rounded-3" id="about">
         <div class="order-2 py-5 col-12 col-lg-7">
             <h1 class="display-5 fw-bold mt-5">SIBETA itu apa ?</h1>
             <p class="col-md-8">
@@ -19,7 +32,7 @@
                 meningkatkan tingkat keminatan ummat islam dalam belajar tajwid, dan mempermudah setiap individu dari
                 kita untuk belajar tajwid tanpa harus membeli buku atau pergi ke suatu tempat pembelajaran atau majlis.
             </p>
-            <button class="btn btn-primary btn-lg" type="button">Detail</button>
+            <a class="btn btn-primary btn-lg" href="/about">Click For More</a>
         </div>
         <div class="order-1 desc-image col-12 col-lg-5">
             <img src="img/desc-img.png" alt="" class="img-fluid" />
@@ -28,10 +41,10 @@
     <!-- End -->
     {{-- Apa Yang Ditawarkan SIBETA --}}
     <div class="container">
-        <h2 class="text-center">Apa Saja Yang Ditawarkan SIBETA ?</h2>
+        <h2 class="text-center mb-2">Apa Saja Yang Ditawarkan SIBETA ?</h2>
         <div class="row">
             {{-- 1 --}}
-            <div class="col-4">
+            <div class="col-lg-4 mb-2">
                 <div class="card">
                     <img src="img/bg-learn.png" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -43,7 +56,7 @@
                 </div>
             </div>
             {{-- 2 --}}
-            <div class="col-4">
+            <div class="col-lg-4 mb-2">
                 <div class="card">
                     <img src="img/bg-trainning.png" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -55,7 +68,7 @@
                 </div>
             </div>
             {{-- 3 --}}
-            <div class="col-4">
+            <div class="col-lg-4 mb-2">
                 <div class="card">
                     <img src="img/bg-diskusi.png" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -72,7 +85,7 @@
     <br>
     <!-- End -->
     <br>
-    <div class="contatiner p-5">
+    {{-- <div class="contatiner p-5">
         <h2 class="text-center">Contoh Tampilan SIBETA</h2>
         <div id="carouselExample" class="carousel slide p-5">
             <div class="carousel-inner">
@@ -95,5 +108,5 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </div> --}}
 @endsection

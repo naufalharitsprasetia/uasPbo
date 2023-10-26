@@ -10,7 +10,7 @@
             </div>
         @endif
         <a href="/create-materi" class="btn btn-success mb-2">Create Materi</a>
-        <a href="/create-category" class="btn btn-success mb-2">Create Category</a>
+        {{-- <a href="/create-category" class="btn btn-success mb-2">Create Category</a> --}}
         <a href="/create-latihan" class="btn btn-success mb-2">Create Latihan</a>
         <br>
         <br>
@@ -36,10 +36,10 @@
                             <td>
                                 <a href="/create-latihan/{{ $latihan->id }}" class="badge bg-info "><i
                                         class="bi bi-eye"></i></a>
-                                <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
-                                <form action="" method="post" class="d-inline">
-                                    @method('delete')
+                                {{-- <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a> --}}
+                                <form action="/create-latihan/{{ $latihan->id }}" method="post" class="d-inline">
                                     @csrf
+                                    @method('delete')
                                     <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
                                             class="bi bi-x-circle"></i></button>
                                 </form>
@@ -102,7 +102,7 @@
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $category->name }}</td>
-                            <td>
+                            {{-- <td>
                                 <a href="" class="badge bg-info "><i class="bi bi-eye"></i></a>
                                 <a href="" class="badge bg-warning "><i class="bi bi-pencil"></i></a>
                                 <form action="" method="post" class="d-inline">
@@ -111,7 +111,7 @@
                                     <button class="badge bg-danger border-0" onclick="return confirm('Are you Sure?')"><i
                                             class="bi bi-x-circle"></i></button>
                                 </form>
-                            </td>
+                            </td> --}}
                         </tr>
                     @endforeach
 

@@ -59,6 +59,11 @@ class PanelJawabanController extends Controller
     public function edit(Jawaban $jawaban)
     {
         //
+        return view('interface.panel.edit-jawaban', [
+            'title' => 'Create Jawaban',
+            'active' => 'panel',
+            'jawaban' => $jawaban
+        ]);
     }
 
     /**
@@ -67,6 +72,14 @@ class PanelJawabanController extends Controller
     public function update(Request $request, Jawaban $jawaban)
     {
         //
+        $validatedData = $request->validate([
+            'jawaban' => 'required|max:255',
+            'is_true' => 'required',
+            'latihan_id' => 'required',
+        ]);
+        Jawaban::where('id', $jawaban->id)->update($validatedData);
+
+        return redirect('/create-latihan/' . $request->input('latihan_id'))->with('success', 'Jawaban has been Updated!');
     }
 
     /**

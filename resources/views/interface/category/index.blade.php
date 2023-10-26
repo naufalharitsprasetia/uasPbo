@@ -2,7 +2,7 @@
 
 @section('container')
     {{-- Opening --}}
-    <div class="card mx-4">
+    <div class="card mx-4 tajwid-ilmu-card">
         <div class="card-header jockey-font">
             SIBETA
         </div>
@@ -10,11 +10,11 @@
             <h5 class="card-title">Ilmu Tajwid</h5>
             <p class="card-text">Ilmu Tajwid adalah ilmu yang mempelajari tata cara membaca al-qur'an yang baik dan
                 benar.</p>
-            <a href="#" class="btn btn-primary"><i class="fa-solid fa-book"></i> BUKU PANDUAN</a>
+            {{-- <a href="#" class="btn btn-primary"><i class="fa-solid fa-book"></i> BUKU PANDUAN</a> --}}
         </div>
-        <div class="alert alert-danger mx-3" role="alert">
+        {{-- <div class="alert alert-danger mx-3" role="alert">
             Aplikasi Ini Masih Dalam Tahap Pengembangan, Mohon Dimaklukmi Jika Masih Banyak Yang Kurang 🙏🙏🙏
-        </div>
+        </div> --}}
     </div>
     {{-- End  --}}
     <br>

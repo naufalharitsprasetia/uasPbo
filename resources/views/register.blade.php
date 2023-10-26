@@ -34,14 +34,14 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Buat Akun Baru!</h1>
                             </div>
                             <form class="user" method="post" action="/register">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text"
                                         class="form-control form-control-user @error('name') is-invalid @enderror"
-                                        id="name" placeholder="Full Name" name="name">
+                                        id="name" placeholder="Nama Lengkap" name="name">
                                     @error('name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <input type="text"
                                         class="form-control form-control-user @error('username') is-invalid @enderror"
-                                        id="username" placeholder="Username (No Space)" pattern="^[^\s]+$"
+                                        id="username" placeholder="Username (Tidak pake spasi)" pattern="^[^\s]+$"
                                         name="username">
                                     @error('username')
                                         <div class="invalid-feedback">
@@ -62,7 +62,7 @@
                                 <div class="form-group">
                                     <input type="email"
                                         class="form-control form-control-user @error('email') is-invalid @enderror"
-                                        id="email" name="email" placeholder="Email Address">
+                                        id="email" name="email" placeholder="Email">
                                     @error('email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -95,7 +95,7 @@
                                 </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Register Account
+                                    Daftar
                                 </button>
                             </form>
                             <hr>
@@ -103,7 +103,7 @@
                                 <a class="small" href="/forgot-password">Forgot Password?</a>
                             </div> --}}
                             <div class="text-center">
-                                <a class="small" href="/login">Already have an account? Login!</a>
+                                <a class="small" href="/login">Sudah punya akun? Login!</a>
                             </div>
                         </div>
                     </div>

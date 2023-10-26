@@ -39,7 +39,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang Kembali!</h1>
                                     </div>
                                     @if (session()->has('success'))
                                         <div class="alert alert-success alert-dismissible fade show fw-normal fs-6"
@@ -63,7 +63,7 @@
                                             <input type="email"
                                                 class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 id="email" name="email" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..." value="{{ old('email') }}"
+                                                placeholder="Masukkan Email Anda..." value="{{ old('email') }}"
                                                 autofocus>
                                             @error('email')
                                                 <div class="invalid-feedback">
@@ -82,15 +82,13 @@
                                             </div>
                                         @enderror
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Login
+                                            Masuk
                                         </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="/forgot-password">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="/register">Create an Account!</a>
+                                        <span>Belum Punya Akun ?</span> <a class="" href="/register">Buat Akun
+                                            Baru !</a>
                                     </div>
                                 </div>
                             </div>

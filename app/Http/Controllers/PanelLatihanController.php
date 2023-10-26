@@ -88,5 +88,7 @@ class PanelLatihanController extends Controller
     public function destroy(Latihan $latihan)
     {
         //
+        Latihan::destroy($latihan->id);
+        return redirect('/panel')->with('success', 'Latihan has been deleted!');
     }
 }

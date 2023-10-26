@@ -3,6 +3,8 @@ body {
     /* min-height: -webkit-fill-available; */
     /* background: linear-gradient(180deg, #78bef2, #1e5f90) !important; */
     background-color: #78bef2;
+    -webkit-animation: colorchange 20s infinite;
+    animation: colorchange 20s infinite;
 }
 
 html {
@@ -74,10 +76,6 @@ html {
 .main-content {
     margin-left: 22vw;
 }
-body {
-    -webkit-animation: colorchange 20s infinite;
-    animation: colorchange 20s infinite;
-}
 @-webkit-keyframes colorchange {
     0% {
         background: #8ebf42;
@@ -110,5 +108,107 @@ body {
     }
     100% {
         background: #b5eff2;
+    }
+}
+#hamburger-menu {
+    display: none !important;
+}
+.absolute-nav {
+    right: -100%;
+}
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+/* Mobile */
+@media (max-width: 728px) {
+    html {
+        font-size: 55%;
+    }
+    .latihan-container {
+        margin-bottom: 2rem;
+    }
+    .tajwid-ilmu-card {
+        margin-bottom: 2rem;
+    }
+    .sidebar-materi {
+        height: auto;
+        width: 100vw;
+        overflow: auto;
+        z-index: 9999;
+        flex-direction: row !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow-x: hidden !important;
+    }
+    .main-content {
+        margin-left: 0;
+        position: relative;
+        top: 7vh;
+    }
+    .navbar-nav {
+        position: absolute;
+        z-index: 99999;
+        top: 100%;
+        right: -100%;
+        background-color: #ffffff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .sound-body {
+        display: none !important;
+    }
+    .dropup {
+        display: none !important;
+    }
+    .img-learn-materi {
+        width: 250px;
+    }
+    #hamburger-menu {
+        display: inline-block !important;
+    }
+    .absolute-nav-active {
+        right: 0;
+    }
+    .absolute-nav {
+        display: block;
+        position: absolute;
+        padding: 1rem;
+        z-index: 999;
+        top: 0%;
+        background-color: #ffffff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .list-side-nav {
+        position: relative;
+        top: 6vh;
+    }
+    .sound-body.sound-body-active {
+        display: block !important ;
+    }
+    .sound-body.sound-body-active .player {
+        width: auto;
+    }
+    .dropup-active {
+        display: block !important ;
+    }
+    .info2 {
+        font-size: 1.4rem !important;
+    }
+    .image-learn {
+        width: 75%;
     }
 }

@@ -1,7 +1,7 @@
 <!-- Start NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex me-5 pe-5 jockey-font " href="#">
+        <a class="navbar-brand d-flex me-5 pe-5 jockey-font align-items-center" href="#">
             <img src="img/logoicon.png" alt="Logo" width="30" height="30"
                 class="d-inline-block align-text-top mx-2" />
             SIBETA
@@ -10,7 +10,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse ms-5" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse ms-5 ps-5" id="navbarNavDropdown">
             {{-- MX Auto Untuk Di Tengah --}}
             <ul class="navbar-nav mx-auto fw-bold">
                 <li class="nav-item">

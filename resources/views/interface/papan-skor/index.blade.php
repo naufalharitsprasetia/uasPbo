@@ -1,7 +1,7 @@
 @extends('interface.layouts.main')
 
 @section('container')
-    <div class="latihan-container bg-white rounded p-4 mx-3">
+    <div class="latihan-container bg-white rounded p-4 mx-3 border border-opacity-50 border-primary border-5">
         <h1><i class="fa-solid fa-star fa-spin me-1" style="color: #ffa50a;"></i> Papan Skor</h1>
         <br>
         <div class="materi-list">
@@ -41,26 +41,34 @@
                             return $userProgress->sum('exp');
                         });
                     @endphp
+                    @php
+                        $myUrutan = 0;
+                        $myExp = 0;
+                    @endphp
 
                     @foreach ($groupedProgress as $key => $userProgress)
                         @php
+                            $i = 0;
                             // Menghitung total XP untuk user tertentu
                             $totalXP = $userProgress->sum('exp');
                         @endphp
-                        <tr @if ($userProgress[0]->user->username === auth()->user()->username) class="table-warning" @endif>
+                        <tr @if ($userProgress[$i]->user->username === auth()->user()->username) class="table-warning" @endif>
                             <th scope="row">
                                 {{ $loop->iteration }}</th>
                             <td><img src="img/profile_{{ $userProgress[0]->user->gender }}.png" alt=""
                                     width="32" height="32"
                                     class="rounded-circle me-3">{{ $userProgress[0]->user->username }}</td>
-                            @if ($userProgress[0]->user->username === auth()->user()->username)
-                                @php
-                                    $myExp = $totalXP;
-                                    $myUrutan = $loop->iteration;
-                                @endphp
+                            @if ($userProgress[$i]->user->username === auth()->user()->username)
+                                <?php
+                                $myUrutan = $loop->iteration;
+                                $myExp = $totalXP;
+                                ?>
                             @endif
                             <td>{{ $totalXP }} XP</td>
                         </tr>
+                        @php
+                            $i++;
+                        @endphp
                     @endforeach
                 </tbody>
             </table>
